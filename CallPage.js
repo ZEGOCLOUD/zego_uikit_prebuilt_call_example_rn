@@ -23,7 +23,9 @@ export default function CallPage(props) {
                 config={{
                     onHangUp: () => {props.navigation.navigate('HomePage')},
                     turnOnCameraWhenJoining: true,
-                    menuBarButtons: [1, 2, 0, 4, 3],
+                    bottomMenuBarConfig: {
+                        buttons: [1, 2, 0, 4, 3]
+                    },
                 }}
             />
         </View>
