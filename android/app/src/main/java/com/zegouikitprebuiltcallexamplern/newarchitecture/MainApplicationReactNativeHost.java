@@ -1,4 +1,4 @@
-package com.my_project.newarchitecture;
+package com.zegouikitprebuiltcallexamplern.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.my_project.BuildConfig;
-import com.my_project.newarchitecture.components.MainComponentsRegistry;
-import com.my_project.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.zegouikitprebuiltcallexamplern.BuildConfig;
+import com.zegouikitprebuiltcallexamplern.newarchitecture.components.MainComponentsRegistry;
+import com.zegouikitprebuiltcallexamplern.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

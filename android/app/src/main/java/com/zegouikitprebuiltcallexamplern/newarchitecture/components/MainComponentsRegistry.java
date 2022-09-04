@@ -1,4 +1,4 @@
-package com.my_project.newarchitecture.components;
+package com.zegouikitprebuiltcallexamplern.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
