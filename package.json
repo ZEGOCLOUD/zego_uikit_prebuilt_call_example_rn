@@ -20,8 +20,8 @@
     "react-native-screens": "^3.16.0",
     "react-navigation": "^4.4.4",
     "zego-express-engine-reactnative": "^0.20.1",
-    "zego-uikit-prebuilt-call-rn": "^0.1.14",
-    "zego-uikit-rn": "^0.1.6"
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^0.1.21",
+    "@zegocloud/zego-uikit-rn": "^0.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

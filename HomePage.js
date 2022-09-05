@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button, View, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
-import ZegoUIKit from 'zego-uikit-rn';
+import ZegoUIKit from '@zegocloud/zego-uikit-rn';
 
 export default function HomePage(props) {
     const navigation = useNavigation();

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useId } from 'react';
 
 import { StyleSheet, View, Text, Button } from 'react-native';
-import ZegoUIKitPrebuiltCall from 'zego-uikit-prebuilt-call-rn';
+import ZegoUIKitPrebuiltCall from '@zegocloud/zego-uikit-prebuilt-call-rn';
 // import ZegoUIKit, {ZegoToggleCameraButton} from @zego-uikit/components-rn
 // import {ZegoUIKitPrebuiltCall} from @zego-uikit/prebuilt-call-rn
 
