@@ -1,6 +1,6 @@
 # Quick start
 
-<img src="http://doc.oa.zego.im/Pics/ZegoUIKit/RN/PrebuiltCall/zego_uikit_rn.gif" alt="drawing" width="300"/>
+<img src="https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/RN/PrebuiltCall/zego_uikit_rn.gif" alt="drawing" width="300"/>
 
 This example code for showing how to make a Video/Audio call APP by using `ZegoUIKitPrebuiltCall`.
 
