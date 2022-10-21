@@ -16,7 +16,7 @@ export default function CallPage(props) {
                 appSign='yourAppSign'
                 userID={userID}
                 userName={userName}
-                callID='rn12345678'
+                callID='rngroup12345678'
                 
                 config={{
                     // ...GROUP_VOICE_CALL_CONFIG,
