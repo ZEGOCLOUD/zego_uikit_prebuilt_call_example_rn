@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358306788863",
+    "project_id": "zegouikitcall",
+    "storage_bucket": "zegouikitcall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358306788863:android:dcd405af139cb2f8b8e3ca",
+        "android_client_info": {
+          "package_name": "com.zegocloud.zegouikit.example.prebuiltcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358306788863-n6peae2a8oqnj43i0bonoq2kank7paco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBULi22V7FnggJGSJBUbIbcPzrAwkGNONQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358306788863-n6peae2a8oqnj43i0bonoq2kank7paco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
