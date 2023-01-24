@@ -1,11 +1,11 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import {
   View,
   TextInput,
   TouchableWithoutFeedback,
   StyleSheet,
 } from 'react-native';
-import {ZegoStartCallInvitationButton} from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import { ZegoSendCallInvitationButton } from '@zegocloud/zego-uikit-prebuilt-call-rn';
 // MemberListPage.js <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 export default function MemberListPage(props) {
@@ -28,13 +28,17 @@ export default function MemberListPage(props) {
             onChangeText={changeTextHandle}
             placeholder="Invitees ID, Separate ids by ','"
           />
-          <ZegoStartCallInvitationButton
-            invitees={invitees}
+          <ZegoSendCallInvitationButton
+            invitees={invitees.map((inviteeID) => {
+              return { userID: inviteeID, userName: 'user_' + inviteeID };
+            })}
             isVideoCall={false}
           />
-          <ZegoStartCallInvitationButton
-            invitees={invitees}
-            isVideoCall={true}
+          <ZegoSendCallInvitationButton
+            invitees={invitees.map((inviteeID) => {
+              return { userID: inviteeID, userName: 'user_' + inviteeID };
+            })}
+            isVideoCall={false}
           />
         </View>
       </View>
