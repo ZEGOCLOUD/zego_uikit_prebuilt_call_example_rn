@@ -17,6 +17,21 @@ export default function MemberListPage(props) {
   const changeTextHandle = value => {
     setInvitees(value ? value.split(',') : []);
   };
+  const willPressedHandle = () => {
+    // Block the method of sending an invitation
+    // If true is returned, it will be sent
+    // If false is returned, it will not be sent
+  
+    // Your code...
+
+    // Synchronization example
+    // return true;
+    
+    // Asynchronous example, an asynchronous method is simulated here
+    return new Promise((resolve, reject) => {
+      resolve(true);
+    })
+  }
 
   return (
     <TouchableWithoutFeedback onPress={pressHandle}>
@@ -33,12 +48,14 @@ export default function MemberListPage(props) {
               return { userID: inviteeID, userName: 'user_' + inviteeID };
             })}
             isVideoCall={false}
+            onWillPressed={willPressedHandle}
           />
           <ZegoSendCallInvitationButton
             invitees={invitees.map((inviteeID) => {
               return { userID: inviteeID, userName: 'user_' + inviteeID };
             })}
-            isVideoCall={false}
+            isVideoCall={true}
+            onWillPressed={willPressedHandle}
           />
         </View>
       </View>
