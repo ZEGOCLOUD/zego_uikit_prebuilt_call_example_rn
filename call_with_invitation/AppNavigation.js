@@ -6,10 +6,11 @@ import MemberListPage from './MemberListPage';
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigation(props) {
+  const { userID } = props;
   return (
     <Stack.Navigator initialRouteName="HomePage">
       <Stack.Screen name="HomePage" component={HomePage} />
-      <Stack.Screen name="MemberListPage" component={MemberListPage} />
+      <Stack.Screen name="MemberListPage" component={MemberListPage} initialParams={{userID}}/>
     </Stack.Navigator>
   );
 }

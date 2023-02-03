@@ -18,7 +18,7 @@ export default function CallWithInvitationPage(props) {
   return (
     <ZegoUIKitPrebuiltCallWithInvitation
       appID={yourAppID}
-      appSign="yourAppSign"
+      appSign='yourAppSign'
       userID={userID}
       userName={userName}
       ringtoneConfig={{
@@ -65,7 +65,7 @@ export default function CallWithInvitationPage(props) {
         };
       }}
       plugins={[ZegoUIKitSignalingPlugin]}>
-      <AppNavigation />
+      <AppNavigation userID={userID}/>
     </ZegoUIKitPrebuiltCallWithInvitation>
   );
 }

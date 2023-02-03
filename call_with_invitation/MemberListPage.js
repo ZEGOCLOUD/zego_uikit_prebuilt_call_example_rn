@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import {
+  Text,
   View,
   TextInput,
   TouchableWithoutFeedback,
@@ -9,6 +10,10 @@ import { ZegoSendCallInvitationButton } from '@zegocloud/zego-uikit-prebuilt-cal
 // MemberListPage.js <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 export default function MemberListPage(props) {
+  const { route } = props;
+  const {
+    userID,
+  } = route.params;
   const [invitees, setInvitees] = useState([]);
   const viewRef = useRef(null);
   const pressHandle = () => {
@@ -36,6 +41,7 @@ export default function MemberListPage(props) {
   return (
     <TouchableWithoutFeedback onPress={pressHandle}>
       <View style={styles.container}>
+        <Text>userID: {userID}</Text>
         <View style={styles.inputContainer}>
           <TextInput
             ref={viewRef}
