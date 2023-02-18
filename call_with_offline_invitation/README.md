@@ -10,7 +10,9 @@ yarn install
 
 You can get appid and appsign from [ZEGOCLOUD's Console](https://console.zegocloud.com/account/login). Then, open `KeyCenter.js` file and set the appid and appsign.
 
-## Rename the package and bundle id
+## Rename the package and bundle(optional)
+
+If you need to change the package name and bundle name to your own project for testing, please do the following:
 
 1. react-native-rename ZegoCall -b com.your.packagename
 2. If you need to build the iOS app, then you need to set the bundle id on Xcode manually
@@ -24,7 +26,7 @@ If you want to receive call invitation notifications, do the following:
     <img src="https://img.shields.io/discord/980014613179555870?color=5865F2&logo=discord&logoColor=white" alt="ZEGOCLOUD"/>
 </a>
 
-2. Then, follow the instructions in the video below.
+1. Then, follow the instructions in the video below.
 
 - iOS:
 
@@ -35,6 +37,25 @@ Resource may help: [Apple Developer](https://developer.apple.com)
 - Android:
   
 [![Watch the video](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/videos/how_to_enable_offline_call_invitation_android.png)](https://youtu.be/mhetL3MTKsE)
+
+## Check if your local configuration is correct
+
+### Android
+
+Please run the cmmand as below:
+
+`python3 zego_check_android_offline_notification.py` 
+
+You will get the output like this if everything is good:
+```
+✅ google-service.json in the right location.
+✅ Package name match google-service.json.
+✅ Project level gradle file is ready.
+✅ Plugin config in app level gradle file is correct.
+✅ Firebase dependencies config in app level gradle file is correct.
+✅ Firebase-Messaging dependencies config in app level gradle file is correct.
+```
+
 
 ## Run on devices
 
