@@ -48,12 +48,12 @@ Please run the cmmand as below:
 
 You will get the output like this if everything is good:
 ```
-✅ google-service.json in the right location.
-✅ Package name match google-service.json.
-✅ Project level gradle file is ready.
-✅ Plugin config in app level gradle file is correct.
-✅ Firebase dependencies config in app level gradle file is correct.
-✅ Firebase-Messaging dependencies config in app level gradle file is correct.
+✅ The google-service.json is in the right location.
+✅ The package name matches google-service.json.
+✅ The project level gradle file is ready.
+✅ The plugin config in the app-level gradle file is correct.
+✅ Firebase dependencies config in the app-level gradle file is correct.
+✅ Firebase-Messaging dependencies config in the app-level gradle file is correct.
 ```
 
 

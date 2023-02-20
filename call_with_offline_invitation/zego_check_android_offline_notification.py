@@ -12,29 +12,29 @@ class AndroidConfigChecker:
 
     def start_check(self):
         if self.is_google_service_json_in_right_location():
-            print("✅ google-service.json in the right location.")
+            print("✅ The google-service.json is in the right location.")
             if self.is_google_service_json_match_package_name():
-                print("✅ Package name match google-service.json.")
+                print("✅ The package name matches google-service.json.")
             else:
-                print("❌ Package name does NOT match google-service.json.")
+                print("❌ The package name does NOT match google-service.json.")
         else:
-            print("❌ google-service.json NOT in the right location.")
+            print("❌ The google-service.json is NOT in the right location.")
         if self.is_project_gradle_correct():
-            print("✅ Project level gradle file is ready.")
+            print("✅ The project level gradle file is ready.")
         else:
-            print("❌ Missing dependencies in project level gradle file.")
+            print("❌ Missing dependencies in project-level gradle file.")
         if self.is_app_gradle_plugin_correct():
-            print("✅ Plugin config in app level gradle file is correct.")
+            print("✅ The plugin config in the app-level gradle file is correct.")
         else:
-            print("❌ Missing com.google.gms.google-services plugin in app level gradle file.")
+            print("❌ Missing com.google.gms.google-services plugin in the app-level gradle file.")
         if self.is_app_gradle_firebase_dependencies_correct():
-            print("✅ Firebase dependencies config in app level gradle file is correct.")
+            print("✅ Firebase dependencies config in the app-level gradle file is correct.")
         else:
-            print("❌ Missing com.google.firebase:firebase-bom dependencies in app level gradle file.")
+            print("❌ Missing com.google.firebase:firebase-bom dependencies in the app-level gradle file.")
         if self.is_app_gradle_firebase_messaging_dependencies_correct():
-            print("✅ Firebase-Messaging dependencies config in app level gradle file is correct.")
+            print("✅ Firebase-Messaging dependencies config in the app-level gradle file is correct.")
         else:
-            print("❌ Missing com.google.firebase:firebase-messaging dependencies in app level gradle file.")
+            print("❌ Missing com.google.firebase:firebase-messaging dependencies in the app-level gradle file.")
 
     def is_google_service_json_in_right_location(self):
         gs_path = os.path.abspath(self._google_service_json_path)
