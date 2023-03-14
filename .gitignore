@@ -29,6 +29,7 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 example/ios/Podfile.lock
+*/ios/Pods
 
 # Android/IJ
 #
