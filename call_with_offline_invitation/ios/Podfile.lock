@@ -291,12 +291,12 @@ PODS:
   - react-native-zego-express-engine (3.2.0):
     - React
     - ZegoExpressEngine (= 3.2.0)
-  - react-native-zego-zim (2.5.0):
+  - react-native-zego-zim (2.7.1):
     - React
-    - ZIM (= 2.5.0)
-  - react-native-zego-zpns (2.2.0):
+    - ZIM (= 2.7.1)
+  - react-native-zego-zpns (2.3.3):
     - React
-    - ZPNs (= 2.0.1)
+    - ZPNs (= 2.1.0)
   - React-perflogger (0.68.5)
   - React-RCTActionSheet (0.68.5):
     - React-Core/RCTActionSheetHeaders (= 0.68.5)
@@ -362,14 +362,16 @@ PODS:
     - React-jsi (= 0.68.5)
     - React-logger (= 0.68.5)
     - React-perflogger (= 0.68.5)
-  - RNDeviceInfo (10.4.0):
+  - RNCAsyncStorage (1.18.0):
+    - React-Core
+  - RNDeviceInfo (10.3.0):
     - React-Core
   - RNNotifee (5.3.0):
     - React-Core
     - RNNotifee/NotifeeCore (= 5.3.0)
   - RNNotifee/NotifeeCore (5.3.0):
     - React-Core
-  - RNScreens (3.20.0):
+  - RNScreens (3.19.0):
     - React-Core
     - React-RCTImage
   - RNSound (0.11.2):
@@ -381,11 +383,13 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
+  - zego-uikit-prebuilt-call-rn (3.0.0-beta.3):
+    - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
   - ZegoExpressEngine/Video (3.2.0)
-  - ZIM (2.5.0)
-  - ZPNs (2.0.1)
+  - ZIM (2.7.1)
+  - ZPNs (2.1.0)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -446,11 +450,13 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - "RNNotifee (from `../node_modules/@notifee/react-native`)"
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSound (from `../node_modules/react-native-sound`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+  - "zego-uikit-prebuilt-call-rn (from `../node_modules/@zegocloud/zego-uikit-prebuilt-call-rn`)"
 
 SPEC REPOS:
   trunk:
@@ -542,6 +548,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-async-storage/async-storage"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNNotifee:
@@ -552,6 +560,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-sound"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
+  zego-uikit-prebuilt-call-rn:
+    :path: "../node_modules/@zegocloud/zego-uikit-prebuilt-call-rn"
 
 SPEC CHECKSUMS:
   boost: a7c83b31436843459a1961bfd74b96033dc77234
@@ -587,8 +597,8 @@ SPEC CHECKSUMS:
   React-logger: 98f663b292a60967ebbc6d803ae96c1381183b6d
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
-  react-native-zego-zim: 10b98d4d9e543d2f0f9a6a6677e30fce86d918ad
-  react-native-zego-zpns: f1faa09c8341e747cf81bf65bbb96c6a546f4930
+  react-native-zego-zim: b35ee3f60bbe3961538fdaf4e7b8601b05bf6ff4
+  react-native-zego-zpns: fc293b46e455d6f051eb381f90c9ba6f1a2aeed1
   React-perflogger: 0458a87ea9a7342079e7a31b0d32b3734fb8415f
   React-RCTActionSheet: 22538001ea2926dea001111dd2846c13a0730bc9
   React-RCTAnimation: 732ce66878d4aa151d56a0d142b1105aa12fd313
@@ -601,16 +611,18 @@ SPEC CHECKSUMS:
   React-RCTVibration: 9819a3bf6230e4b2a99877c21268b0b2416157a1
   React-runtimeexecutor: b1f1995089b90696dbc2a7ffe0059a80db5c8eb1
   ReactCommon: 149e2c0acab9bac61378da0db5b2880a1b5ff59b
-  RNDeviceInfo: 749f2e049dcd79e2e44f134f66b73a06951b5066
+  RNCAsyncStorage: a46ee6bf15cf1ba863d0a47287236f9c95d5b213
+  RNDeviceInfo: 4701f0bf2a06b34654745053db0ce4cb0c53ada7
   RNNotifee: e98a6bb4add6f05e9421ba02683d619b0146d902
-  RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
+  RNScreens: ea4cd3a853063cda19a4e3c28d2e52180c80f4eb
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: c4d61225a466f250c35c1ee78d2d0b3d41fe661c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  zego-uikit-prebuilt-call-rn: 184cc79b935fc662dff3cb01ed25a36ef9b7735a
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
-  ZIM: 98ff6cc7bc28b0c54476ab317dfe1e62f6e90738
-  ZPNs: 76102346942e8337b4189ce64083a96d79cab2a9
+  ZIM: 70617c39c931038adc87bbe1f4aee3c80bbc997d
+  ZPNs: 7e3b073a97f3a7d9bbf77d76c94c4f592ab9aa2c
 
 PODFILE CHECKSUM: 418f6129a4b2efc7983c56b5a822d1b83efb15b7
 
