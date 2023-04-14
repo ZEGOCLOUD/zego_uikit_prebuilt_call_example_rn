@@ -169,7 +169,7 @@ function HomeScreen({ route, navigation }) {
               return { userID: inviteeID, userName: 'user_' + inviteeID };
             })}
             isVideoCall={false}
-            resourceID={"zegouikit_call"}
+            resourceID={"zego_data"}
           />
           <ZegoSendCallInvitationButton
             invitees={invitees.map((inviteeID) => {

@@ -282,6 +282,8 @@ PODS:
   - React-jsinspector (0.68.5)
   - React-logger (0.68.5):
     - glog
+  - react-native-get-app-name (1.5.0):
+    - React
   - react-native-safe-area-context (4.5.0):
     - RCT-Folly
     - RCTRequired
@@ -294,7 +296,7 @@ PODS:
   - react-native-zego-zim (2.7.1):
     - React
     - ZIM (= 2.7.1)
-  - react-native-zego-zpns (2.3.3):
+  - react-native-zego-zpns (2.3.5):
     - React
     - ZPNs (= 2.1.0)
   - React-perflogger (0.68.5)
@@ -385,7 +387,7 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (3.0.0-beta.1):
+  - zego-uikit-prebuilt-call-rn (3.0.0-beta.8):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
@@ -436,6 +438,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-get-app-name (from `../node_modules/react-native-get-app-name`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-zego-express-engine (from `../node_modules/zego-express-engine-reactnative`)
   - react-native-zego-zim (from `../node_modules/zego-zim-react-native`)
@@ -519,6 +522,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-get-app-name:
+    :path: "../node_modules/react-native-get-app-name"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-zego-express-engine:
@@ -600,10 +605,11 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 45c0496ca8cef6b02d9fa0274c25cf458fe91a56
   React-jsinspector: eb202e43b3879aba9a14f3f65788aec85d4e1ea9
   React-logger: 98f663b292a60967ebbc6d803ae96c1381183b6d
+  react-native-get-app-name: 966c3074a2e6a157ce932e5d8538388904a0a209
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
   react-native-zego-zim: b35ee3f60bbe3961538fdaf4e7b8601b05bf6ff4
-  react-native-zego-zpns: fc293b46e455d6f051eb381f90c9ba6f1a2aeed1
+  react-native-zego-zpns: 63e15007fd113a9ada14ac91ea261f35332b9bed
   React-perflogger: 0458a87ea9a7342079e7a31b0d32b3734fb8415f
   React-RCTActionSheet: 22538001ea2926dea001111dd2846c13a0730bc9
   React-RCTAnimation: 732ce66878d4aa151d56a0d142b1105aa12fd313
@@ -625,7 +631,7 @@ SPEC CHECKSUMS:
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: c4d61225a466f250c35c1ee78d2d0b3d41fe661c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 14bf792bc8be98cd040c60f4b61969c5c787aa88
+  zego-uikit-prebuilt-call-rn: bf30b336707838cd587edfd29a2527c6bbcb9b28
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: 70617c39c931038adc87bbe1f4aee3c80bbc997d
   ZPNs: 7e3b073a97f3a7d9bbf77d76c94c4f592ab9aa2c
