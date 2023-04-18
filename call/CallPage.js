@@ -3,6 +3,7 @@ import { useId } from 'react';
 
 import { StyleSheet, View, Text, Button } from 'react-native';
 import ZegoUIKitPrebuiltCall, { ONE_ON_ONE_VIDEO_CALL_CONFIG, ONE_ON_ONE_VOICE_CALL_CONFIG } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import KeyCenter from "./KeyCenter";
 
 export default function CallPage(props) {
     const { route } = props;
@@ -12,8 +13,8 @@ export default function CallPage(props) {
     return (
         <View style={styles.container}>
             <ZegoUIKitPrebuiltCall
-                appID={yourAppID}
-                appSign='yourAppSign'
+                appID={KeyCenter.appID}
+                appSign={KeyCenter.appSign}
                 userID={userID}
                 userName={userName}
                 callID='rn12345678'
