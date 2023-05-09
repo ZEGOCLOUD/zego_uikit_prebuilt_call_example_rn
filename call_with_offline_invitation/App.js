@@ -6,7 +6,8 @@ import KeyCenter from './KeyCenter';
 import { getFirstInstallTime } from 'react-native-device-info'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import ZegoUIKitSignalingPlugin from '@zegocloud/zego-uikit-signaling-plugin-rn';
+import * as ZIM from 'zego-zim-react-native';
+import * as ZPNs from 'zego-zpns-react-native';
 import ZegoUIKitPrebuiltCallService, {
   ZegoCallInvitationDialog, ZegoUIKitPrebuiltCallWaitingScreen, ZegoUIKitPrebuiltCallInCallScreen, ZegoSendCallInvitationButton,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
@@ -38,7 +39,7 @@ const onUserLogin = async (userID, userName) => {
     KeyCenter.appSign,
     userID,
     userName,
-    [ZegoUIKitSignalingPlugin],
+    [ZIM, ZPNs],
     {
       ringtoneConfig: {
         incomingCallFileName: 'zego_incoming.mp3',

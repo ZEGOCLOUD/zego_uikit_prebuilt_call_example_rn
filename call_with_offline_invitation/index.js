@@ -7,8 +7,10 @@ import App from './App';
 import {name as appName} from './app.json';
 
 import ZegoUIKitPrebuiltCallService from '@zegocloud/zego-uikit-prebuilt-call-rn';
-import ZegoUIKitSignalingPlugin from '@zegocloud/zego-uikit-signaling-plugin-rn';
+import * as ZIM from 'zego-zim-react-native';
+import * as ZPNs from 'zego-zpns-react-native';
 
-ZegoUIKitPrebuiltCallService.useSystemCallingUI(ZegoUIKitSignalingPlugin);
+
+ZegoUIKitPrebuiltCallService.useSystemCallingUI([ZIM, ZPNs]);
 
 AppRegistry.registerComponent(appName, () => App);
