@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useId } from 'react';
 
 import { StyleSheet, View, Text, Button } from 'react-native';
-import ZegoUIKitPrebuiltCall, { GROUP_VIDEO_CALL_CONFIG, GROUP_VOICE_CALL_CONFIG } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import { ZegoUIKitPrebuiltCall, GROUP_VIDEO_CALL_CONFIG, GROUP_VOICE_CALL_CONFIG } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import KeyCenter from "./KeyCenter";
 
 export default function CallPage(props) {
     const { route } = props;
@@ -12,8 +12,8 @@ export default function CallPage(props) {
     return (
         <View style={styles.container}>
             <ZegoUIKitPrebuiltCall
-                appID={yourAppID}
-                appSign='yourAppSign'
+                appID={KeyCenter.appID}
+                appSign={KeyCenter.appSign}
                 userID={userID}
                 userName={userName}
                 callID='rngroup12345678'
@@ -21,7 +21,18 @@ export default function CallPage(props) {
                 config={{
                     // ...GROUP_VOICE_CALL_CONFIG,
                     ...GROUP_VIDEO_CALL_CONFIG,
-                    onHangUp: () => {props.navigation.navigate('HomePage')},
+                    onHangUp: () => {
+                        props.navigation.navigate('HomePage');
+                    },
+                    durationConfig: {
+                        isVisible: true,
+                        onDurationUpdate: (duration) => {
+                            console.log('########CallPage onDurationUpdate', duration);
+                            if (duration === 5) {
+                                ZegoUIKitPrebuiltCallService.hangUp();
+                            }
+                        }
+                    }
                 }}
             />
         </View>

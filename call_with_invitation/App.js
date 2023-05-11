@@ -44,7 +44,21 @@ const onUserLogin = async (userID, userName) => {
         incomingCallFileName: 'zego_incoming.mp3',
         outgoingCallFileName: 'zego_outgoing.mp3',
       },
-    });
+      requireConfig: (data) => {
+        return {
+          durationConfig: {
+            isVisible: true,
+            onDurationUpdate: (duration) => {
+              console.log('########CallWithInvitation onDurationUpdate', duration);
+              if (duration === 5) {
+                ZegoUIKitPrebuiltCallService.hangUp();
+              }
+            }
+          }
+        }
+      }
+    }
+  );
 }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Step 1: Config React Navigation
