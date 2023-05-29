@@ -9,7 +9,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ZIM from 'zego-zim-react-native';
 import * as ZPNs from 'zego-zpns-react-native';
 import ZegoUIKitPrebuiltCallService, {
-  ZegoCallInvitationDialog, ZegoUIKitPrebuiltCallWaitingScreen, ZegoUIKitPrebuiltCallInCallScreen, ZegoSendCallInvitationButton,
+  ZegoCallInvitationDialog,
+  ZegoUIKitPrebuiltCallWaitingScreen,
+  ZegoUIKitPrebuiltCallInCallScreen,
+  ZegoSendCallInvitationButton,
+  ZegoMenuBarButtonName,
+  ZegoUIKitPrebuiltCallFloatingMinimizedView,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
 
 const Stack = createNativeStackNavigator();
@@ -33,7 +38,7 @@ const getUserInfo = async () => {
   }
 }
 
-const onUserLogin = async (userID, userName) => {
+const onUserLogin = async (userID, userName, props) => {
   return ZegoUIKitPrebuiltCallService.init(
     KeyCenter.appID,
     KeyCenter.appSign,
@@ -54,14 +59,27 @@ const onUserLogin = async (userID, userName) => {
       requireConfig: (data) => {
         return {
           durationConfig: {
-              isVisible: true,
-              onDurationUpdate: (duration) => {
-                console.log('########CallWithInvitation onDurationUpdate', duration);
-                if (duration === 5) {
-                  ZegoUIKitPrebuiltCallService.hangUp();
-                }
+            isVisible: true,
+            onDurationUpdate: (duration) => {
+              console.log('########CallWithInvitation onDurationUpdate', duration);
+              if (duration === 10 * 60) {
+                ZegoUIKitPrebuiltCallService.hangUp();
               }
-          }
+            }
+          },
+          topMenuBarConfig: {
+            buttons: [
+              ZegoMenuBarButtonName.minimizingButton,
+            ],
+          },
+          onWindowMinimized: () => {
+            console.log('[Demo]CallInvitation onWindowMinimized');
+            props.navigation.navigate('HomeScreen');
+          },
+          onWindowMaximized: () => {
+            console.log('[Demo]CallInvitation onWindowMaximized');
+            props.navigation.navigate('ZegoUIKitPrebuiltCallInCallScreen');
+          },
         }
       }
     }
@@ -99,6 +117,7 @@ export default function App() {
         />
 
       </Stack.Navigator>
+      <ZegoUIKitPrebuiltCallFloatingMinimizedView />
     </NavigationContainer>);
 }
 
@@ -115,7 +134,7 @@ function LoginScreen(props) {
     storeUserInfo({ userID, userName })
 
     // Init the call service
-    onUserLogin(userID, userName).then(() => {
+    onUserLogin(userID, userName, props).then(() => {
       // Jump to HomeScreen to make new call
       navigation.navigate('HomeScreen', { userID });
     })
@@ -143,7 +162,7 @@ function LoginScreen(props) {
 }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Step 3: Configure the "ZegoSendCallInvitationButton" to enable making calls. 
-function HomeScreen({ route, navigation }) {
+function HomeScreen(props) {
   const [userID, setUserID] = useState('')
   const [invitees, setInvitees] = useState([]);
   const viewRef = useRef(null);
@@ -160,10 +179,10 @@ function HomeScreen({ route, navigation }) {
     getUserInfo().then((info) => {
       if (info) {
         setUserID(info.userID)
-        onUserLogin(info.userID, info.userName)
+        onUserLogin(info.userID, info.userName, props)
       } else {
         //  Back to the login screen if not login before
-        navigation.navigate('LoginScreen');
+        props.navigation.navigate('LoginScreen');
       }
     })
   }, [])
