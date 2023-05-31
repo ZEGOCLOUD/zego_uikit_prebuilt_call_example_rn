@@ -214,7 +214,7 @@ function HomeScreen(props) {
           />
         </View>
         <View style={{ width: 220, marginTop: 100 }}>
-          <Button title='Back To Login Screen' onPress={() => { navigation.navigate('LoginScreen') }}></Button>
+          <Button title='Back To Login Screen' onPress={() => { props.navigation.navigate('LoginScreen') }}></Button>
         </View>
       </View>
     </TouchableWithoutFeedback>
