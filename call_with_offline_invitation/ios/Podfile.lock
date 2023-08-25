@@ -521,7 +521,7 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (4.2.5):
+  - zego-uikit-prebuilt-call-rn (4.2.6):
     - React-Core
   - zego-uikit-rn (2.2.2):
     - React-Core
@@ -800,7 +800,7 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 4a184d09d074c162eca8d555f9c2a9a68de0eb33
+  zego-uikit-prebuilt-call-rn: 8b5d7e57e0a331612eea9442eeb24ec43984bc06
   zego-uikit-rn: a7627f2bade79748e0eda9bcda270a551cfb5f9b
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: c3388322ebe0028b85f976979c8cafd3d3032399

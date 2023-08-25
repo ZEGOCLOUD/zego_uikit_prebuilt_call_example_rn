@@ -25,7 +25,7 @@
     "react-native-screens": "^3.18.2",
     "react-native-sound": "^0.11.2",
     "zego-express-engine-reactnative": "3.2.0",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^4.2.5",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^4.2.6",
     "zego-zim-react-native": "2.9.0",
     "zego-zpns-react-native": "2.4.0"
   },
