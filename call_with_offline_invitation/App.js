@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, TouchableOpacity, Image, } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import KeyCenter from './KeyCenter';
@@ -8,15 +8,23 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as ZIM from 'zego-zim-react-native';
 import * as ZPNs from 'zego-zpns-react-native';
+
 import ZegoUIKitPrebuiltCallService, {
   ZegoCallInvitationDialog,
   ZegoUIKitPrebuiltCallWaitingScreen,
   ZegoUIKitPrebuiltCallInCallScreen,
   ZegoSendCallInvitationButton,
-  ZegoMenuBarButtonName,
   ZegoUIKitPrebuiltCallFloatingMinimizedView,
-  ZegoCountdownLabel,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+
+import {
+  ZegoLeaveButton,
+  ZegoSwitchAudioOutputButton,
+  ZegoSwitchCameraButton,
+  ZegoToggleCameraButton,
+  ZegoToggleMicrophoneButton,
+  ZegoViewPosition,
+} from '@zegocloud/zego-uikit-rn'
 
 const Stack = createNativeStackNavigator();
 
@@ -63,7 +71,6 @@ const onUserLogin = async (userID, userName, props) => {
             console.log('########CallWithInvitation onHangUp', duration);
             props.navigation.navigate('HomeScreen');
           },
-          foregroundBuilder: () => <ZegoCountdownLabel maxDuration={60} onCountdownFinished={() => { console.log("Countdown finished!!"); ZegoUIKitPrebuiltCallService.hangUp(true); }} />,
           timingConfig: {
             enableTiming: true,
             onDurationUpdate: (duration) => {
@@ -73,24 +80,95 @@ const onUserLogin = async (userID, userName, props) => {
               }
             }
           },
+          layout: {
+            config: {
+              smallViewBorderRadius: 10,
+              smallViewPostion: ZegoViewPosition.topRight,
+              smallViewSize: { width: 120, height: 180 },
+            }
+          },
           topMenuBarConfig: {
-            buttons: [
-              ZegoMenuBarButtonName.minimizingButton,
-            ],
+            buttons: [ ],
           },
-          onWindowMinimized: () => {
-            console.log('[Demo]CallInvitation onWindowMinimized');
-            props.navigation.navigate('HomeScreen');
+          bottomMenuBarConfig: {
+            buttons: [ ],
           },
-          onWindowMaximized: () => {
-            console.log('[Demo]CallInvitation onWindowMaximized');
-            props.navigation.navigate('ZegoUIKitPrebuiltCallInCallScreen');
+          foregroundBuilder: () =>  {
+            return (
+              <View style={foregroundStyles.container} pointerEvents={'box-none'}>
+                <TouchableOpacity
+                  style={foregroundStyles.chatButton}
+                  onPress={() => {
+                    console.log('Chat Button Pressed.');
+                  }}>
+                  <Image
+                    resizeMode='contain' 
+                    source={require('./resources/white_bottom_button_message.png')} 
+                    style={{ width: "100%", height: "100%" }} 
+                  />
+                </TouchableOpacity>
+                <View style={foregroundStyles.bottomView}>
+                  <ZegoToggleCameraButton isOn={true} 
+                    iconCameraOn={require('./resources/white_button_camera_on.png')} 
+                    iconCameraOff={require('./resources/white_button_camera_off.png')} 
+                  />
+                  <ZegoSwitchCameraButton 
+                    iconFrontFacingCamera={require('./resources/white_button_flip_camera.png')}
+                    iconBackFacingCamera={require('./resources/white_button_flip_camera.png')} 
+                  />
+                  <ZegoLeaveButton 
+                    iconLeave={require('./resources/white_button_hang_up.png')}
+                    onPressed={() => {
+                      props.navigation.navigate('HomeScreen');
+                  }}
+                  />
+                  <ZegoToggleMicrophoneButton isOn={true}
+                    iconMicOn={require('./resources/white_button_mic_on.png')}
+                    iconMicOff={require('./resources/white_button_mic_off.png')}
+                  />
+                  <ZegoSwitchAudioOutputButton useSpeaker={true}
+                    iconSpeaker={require('./resources/white_button_speaker_on.png')}
+                    iconEarpiece={require('./resources/white_button_speaker_off.png')}
+                    iconBluetooth={require('./resources/white_button_bluetooth_off.png')}
+                  />
+                </View>
+              </View>
+            );
           },
         }
       }
     }
   );
 }
+
+const foregroundStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+  bottomView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 30,
+    alignItems: 'center',
+    position: 'absolute',
+    height: 120,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'lightblue'
+  },
+  chatButton: {
+    position: 'absolute',
+    width: 48,
+    height: 48,
+    left: 50,
+    bottom: 150,
+  },
+});
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Step 1: Config React Navigation
 export default function App() {
@@ -216,7 +294,7 @@ function HomeScreen(props) {
               return { userID: inviteeID, userName: 'user_' + inviteeID };
             })}
             isVideoCall={true}
-            resourceID={"zegouikit_call"}
+            resourceID={"zego_data"}
           />
         </View>
         <View style={{ width: 220, marginTop: 100 }}>

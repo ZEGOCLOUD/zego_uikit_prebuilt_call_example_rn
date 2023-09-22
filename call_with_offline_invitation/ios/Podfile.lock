@@ -377,7 +377,7 @@ PODS:
     - glog
   - react-native-encrypted-storage (4.0.3):
     - React-Core
-  - react-native-safe-area-context (4.7.1):
+  - react-native-safe-area-context (4.7.2):
     - React-Core
   - react-native-zego-express-engine (3.2.0):
     - React
@@ -500,16 +500,16 @@ PODS:
     - React-perflogger (= 0.72.3)
   - RNCallKeep (4.3.9):
     - React
-  - RNCAsyncStorage (1.19.2):
+  - RNCAsyncStorage (1.19.3):
     - React-Core
-  - RNDeviceInfo (10.8.0):
+  - RNDeviceInfo (10.11.0):
     - React-Core
   - RNNotifee (5.3.0):
     - React-Core
     - RNNotifee/NotifeeCore (= 5.3.0)
   - RNNotifee/NotifeeCore (5.3.0):
     - React-Core
-  - RNScreens (3.24.0):
+  - RNScreens (3.25.0):
     - React-Core
     - React-RCTImage
   - RNSound (0.11.2):
@@ -521,9 +521,9 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (4.2.6):
+  - zego-uikit-prebuilt-call-rn (4.2.10):
     - React-Core
-  - zego-uikit-rn (2.2.2):
+  - zego-uikit-rn (2.2.6):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
@@ -770,7 +770,7 @@ SPEC CHECKSUMS:
   React-jsinspector: b511447170f561157547bc0bef3f169663860be7
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
   react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
-  react-native-safe-area-context: 9697629f7b2cda43cf52169bb7e0767d330648c2
+  react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
   react-native-zego-zim: 0ed48220ccf4d8a2468f6aff9b261512a8a9e96e
   react-native-zego-zpns: 0f06c24b70c412d6f04da5a1ae00fca776dac37b
@@ -792,16 +792,16 @@ SPEC CHECKSUMS:
   React-utils: bcb57da67eec2711f8b353f6e3d33bd8e4b2efa3
   ReactCommon: 3ccb8fb14e6b3277e38c73b0ff5e4a1b8db017a9
   RNCallKeep: 7c86d916fbc6b2184a5cf47967a240928994547e
-  RNCAsyncStorage: f57e929cd7757f2cb3dd8186d123c09e8281a1ad
-  RNDeviceInfo: 5795b418ed3451ebcaf39384e6cf51f60cb931c9
+  RNCAsyncStorage: c913ede1fa163a71cea118ed4670bbaaa4b511bb
+  RNDeviceInfo: bf8a32acbcb875f568217285d1793b0e8588c974
   RNNotifee: e98a6bb4add6f05e9421ba02683d619b0146d902
-  RNScreens: b21dc57dfa2b710c30ec600786a3fc223b1b92e7
+  RNScreens: 85d3880b52d34db7b8eeebe2f1a0e807c05e69fa
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 8b5d7e57e0a331612eea9442eeb24ec43984bc06
-  zego-uikit-rn: a7627f2bade79748e0eda9bcda270a551cfb5f9b
+  zego-uikit-prebuilt-call-rn: 38baf02753ae9371bc4cdc216e22a336127cbd95
+  zego-uikit-rn: 23afb32ebe65f58e9d49ce2bb35e311f6dbbd647
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: c3388322ebe0028b85f976979c8cafd3d3032399
   ZPNs: 2ef89a571260ca9ffe4fc3394413ff19b8e372be

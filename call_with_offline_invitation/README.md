@@ -1,69 +1,130 @@
-# Run the example
+# Customize Bottom Bar
 
-## Install dependencies
+### 1. Update Dependencies
 
-```bash
-yarn install
+Update the dependencies to the latest version.
+
+```json
+"@zegocloud/zego-uikit-rn": "^2.2.6",
+"@zegocloud/zego-uikit-prebuilt-call-rn": "^4.2.10",
 ```
 
-## Set appid and appsign
+### 2. Adjust the Layout
 
-You can get appid and appsign from [ZEGOCLOUD's Console](https://console.zegocloud.com/account/login). Then, open `KeyCenter.js` file and set the appid and appsign.
+```javascript
+import { ZegoViewPostion } from '@zegocloud/zego-uikit-rn'
 
-## Rename the package and bundle(optional)
+layout: {
+  config: {
+    // Modify the border radius of the small view
+    smallViewBorderRadius: 10,
+    // Change the position of the small view to the Top Right.
+    smallViewPostion: ZegoViewPostion.topRight,
+    // Change the size of the small view.
+    smallViewSize: { width: 120, height: 180 },
+  }
+},
+```
 
-If you need to change the package name and bundle name to your own project for testing, please do the following:
+### 3. Remove the default buttons
 
-1. react-native-rename ZegoCall -b com.your.packagename
-2. If you need to build the iOS app, then you need to set the bundle id on Xcode manually
+```javascript
+topMenuBarConfig: {
+  buttons: [ ],
+},
+bottomMenuBarConfig: {
+  buttons: [ ],
+},
+```
 
-## Config your project to enable offline call invitation
+### 4. Customize the bottom bar using foreground builder
 
-If you want to receive call invitation notifications, do the following: 
-1. Click the button below to contact ZEGOCLOUD Technical Support.
+```javascript
+import {
+  ZegoLeaveButton,
+  ZegoSwitchAudioOutputButton,
+  ZegoSwitchCameraButton,
+  ZegoToggleCameraButton,
+  ZegoToggleMicrophoneButton,
+} from '@zegocloud/zego-uikit-rn'
 
-    <a href="https://discord.gg/ExaKJvBbxy">
-    <img src="https://img.shields.io/discord/980014613179555870?color=5865F2&logo=discord&logoColor=white" alt="ZEGOCLOUD"/>
-</a>
-
-1. Then, follow the instructions in the video below.
-
-- iOS:
-
-[![Watch the video](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/videos/how_to_enable_offline_call_invitation_ios.png)](https://youtu.be/rzdRY8bDqdo)
-
-Resource may help: [Apple Developer](https://developer.apple.com)
-
-- Android:
+foregroundBuilder: () =>  {
+  return (
+    <View style={foregroundStyles.container} pointerEvents={'box-none'}>
+      <TouchableOpacity
+        style={foregroundStyles.chatButton}
+        onPress={() => {
+          console.log('Chat Button Pressed.');
+        }}>
+        <Image
+          resizeMode='contain' 
+          source={require('./resources/white_bottom_button_message.png')} 
+          style={{ width: "100%", height: "100%" }} 
+        />
+      </TouchableOpacity>
+      <View style={foregroundStyles.bottomView}>
+        <ZegoToggleCameraButton isOn={true} 
+          iconCameraOn={require('./resources/white_button_camera_on.png')} 
+          iconCameraOff={require('./resources/white_button_camera_off.png')} 
+        />
+        <ZegoSwitchCameraButton 
+          iconFrontFacingCamera={require('./resources/white_button_flip_camera.png')}
+          iconBackFacingCamera={require('./resources/white_button_flip_camera.png')} 
+        />
+        <ZegoLeaveButton 
+          iconLeave={require('./resources/white_button_hang_up.png')}
+          onPressed={() => {
+            props.navigation.navigate('HomeScreen');
+        }}
+        />
+        <ZegoToggleMicrophoneButton isOn={true}
+          iconMicOn={require('./resources/white_button_mic_on.png')}
+          iconMicOff={require('./resources/white_button_mic_off.png')}
+        />
+        <ZegoSwitchAudioOutputButton useSpeaker={true}
+          iconSpeaker={require('./resources/white_button_speaker_on.png')}
+          iconEarpiece={require('./resources/white_button_speaker_off.png')}
+          iconBluetooth={require('./resources/white_button_bluetooth_off.png')}
+        />
+      </View>
+    </View>
+  );
+},
   
-[![Watch the video](https://storage.zego.im/sdk-doc/Pics/ZegoUIKit/videos/how_to_enable_offline_call_invitation_android.png)](https://youtu.be/mhetL3MTKsE)
-
-## Check if your local configuration is correct
-
-### Android
-
-Please run the cmmand as below:
-
-`python3 zego_check_android_offline_notification.py` 
-
-You will get the output like this if everything is good:
+const foregroundStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+  bottomView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 30,
+    alignItems: 'center',
+    position: 'absolute',
+    height: 120,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'lightblue'
+  },
+  chatButton: {
+    position: 'absolute',
+    width: 48,
+    height: 48,
+    left: 50,
+    bottom: 150,
+  },
+});
 ```
-✅ The google-service.json is in the right location.
-✅ The package name matches google-service.json.
-✅ The project level gradle file is ready.
-✅ The plugin config in the app-level gradle file is correct.
-✅ Firebase dependencies config in the app-level gradle file is correct.
-✅ Firebase-Messaging dependencies config in the app-level gradle file is correct.
-```
+
+Please refer to the detailed code in "App.js".
 
 
-## Run on devices
 
-1. Android
-```bash
-yarn android
-```
-2. iOS
-```bash
-yarn ios
-```
+The effect after modification is as follows:
+
+<img src='./images/bottom_bar.jpeg' width=400>
