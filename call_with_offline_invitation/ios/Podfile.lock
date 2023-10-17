@@ -521,9 +521,9 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (4.2.11):
+  - zego-uikit-prebuilt-call-rn (4.2.12):
     - React-Core
-  - zego-uikit-rn (2.2.8):
+  - zego-uikit-rn (2.3.1):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
@@ -800,12 +800,12 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 3421ee087790a35ee96984eb0e1dfd449e661b53
-  zego-uikit-rn: cf9ed52d9663d81d286127a33e8062b6bf28e25e
+  zego-uikit-prebuilt-call-rn: 246ef63d51a122d736f567e350c199d00140277c
+  zego-uikit-rn: 22b896b4f0f6bea005cc81cf769d12c074556924
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: b0f5fdf211b723819043019373f9003d5e98420d
   ZPNs: 3f73f4ee16eef87db96986d85b2c1b4e2286f4ee
 
 PODFILE CHECKSUM: fdcb352319772cf162bb1f3ad23aa5870ddcba4b
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0
