@@ -377,7 +377,9 @@ PODS:
     - glog
   - react-native-encrypted-storage (4.0.3):
     - React-Core
-  - react-native-safe-area-context (4.7.2):
+  - react-native-keep-awake (4.0.0):
+    - React
+  - react-native-safe-area-context (4.7.4):
     - React-Core
   - react-native-zego-express-engine (3.2.0):
     - React
@@ -500,7 +502,7 @@ PODS:
     - React-perflogger (= 0.72.3)
   - RNCallKeep (4.3.9):
     - React
-  - RNCAsyncStorage (1.19.3):
+  - RNCAsyncStorage (1.19.4):
     - React-Core
   - RNDeviceInfo (10.11.0):
     - React-Core
@@ -509,9 +511,9 @@ PODS:
     - RNNotifee/NotifeeCore (= 5.3.0)
   - RNNotifee/NotifeeCore (5.3.0):
     - React-Core
-  - RNScreens (3.25.0):
+  - RNScreens (3.27.0):
+    - RCT-Folly (= 2021.07.22.00)
     - React-Core
-    - React-RCTImage
   - RNSound (0.11.2):
     - React-Core
     - RNSound/Core (= 0.11.2)
@@ -521,9 +523,9 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (4.2.12):
+  - zego-uikit-prebuilt-call-rn (4.3.0):
     - React-Core
-  - zego-uikit-rn (2.3.1):
+  - zego-uikit-rn (2.5.0):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
@@ -577,6 +579,7 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-encrypted-storage (from `../node_modules/react-native-encrypted-storage`)
+  - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-zego-express-engine (from `../node_modules/zego-express-engine-reactnative`)
   - react-native-zego-zim (from `../node_modules/zego-zim-react-native`)
@@ -674,6 +677,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-encrypted-storage:
     :path: "../node_modules/react-native-encrypted-storage"
+  react-native-keep-awake:
+    :path: "../node_modules/react-native-keep-awake"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-zego-express-engine:
@@ -770,7 +775,8 @@ SPEC CHECKSUMS:
   React-jsinspector: b511447170f561157547bc0bef3f169663860be7
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
   react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
-  react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
+  react-native-keep-awake: afad8a51dfef9fe9655a6344771be32c8596d774
+  react-native-safe-area-context: 2cd91d532de12acdb0a9cbc8d43ac72a8e4c897c
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
   react-native-zego-zim: be5c3093eb9fa72626e0d97db4dfe852c4ccd007
   react-native-zego-zpns: c546cad65af26567f2a7e0443c6573575786da60
@@ -792,20 +798,20 @@ SPEC CHECKSUMS:
   React-utils: bcb57da67eec2711f8b353f6e3d33bd8e4b2efa3
   ReactCommon: 3ccb8fb14e6b3277e38c73b0ff5e4a1b8db017a9
   RNCallKeep: 7c86d916fbc6b2184a5cf47967a240928994547e
-  RNCAsyncStorage: c913ede1fa163a71cea118ed4670bbaaa4b511bb
+  RNCAsyncStorage: 3a8f7145d17cdd9f88e7b77666c94a09e4f759c8
   RNDeviceInfo: bf8a32acbcb875f568217285d1793b0e8588c974
   RNNotifee: e98a6bb4add6f05e9421ba02683d619b0146d902
-  RNScreens: 85d3880b52d34db7b8eeebe2f1a0e807c05e69fa
+  RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 246ef63d51a122d736f567e350c199d00140277c
-  zego-uikit-rn: 22b896b4f0f6bea005cc81cf769d12c074556924
+  zego-uikit-prebuilt-call-rn: 8d8379ef75b6187699b39777959b7318a0a5467f
+  zego-uikit-rn: 916c0946b90c9e83e401f7ab160959dd87a521a6
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
   ZIM: b0f5fdf211b723819043019373f9003d5e98420d
   ZPNs: 3f73f4ee16eef87db96986d85b2c1b4e2286f4ee
 
 PODFILE CHECKSUM: fdcb352319772cf162bb1f3ad23aa5870ddcba4b
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.2

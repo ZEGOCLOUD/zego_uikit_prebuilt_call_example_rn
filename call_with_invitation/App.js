@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, Image, } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import KeyCenter from './KeyCenter';
@@ -48,6 +48,15 @@ const onUserLogin = async (userID, userName, props) => {
       ringtoneConfig: {
         incomingCallFileName: 'zego_incoming.mp3',
         outgoingCallFileName: 'zego_outgoing.mp3',
+      },
+      avatarBuilder: ({userInfo}) => {
+        return <View style={{width: '100%', height: '100%'}}>
+         <Image
+          style={{ width: '100%', height: '100%' }}
+          resizeMode="cover"
+          source={{ uri: `https://robohash.org/${userInfo.userID}.png` }}
+          />
+        </View>
       },
       requireConfig: (data) => {
         return {

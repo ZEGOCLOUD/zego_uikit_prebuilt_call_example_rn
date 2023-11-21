@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Image } from 'react-native';
 import {
     ZegoUIKitPrebuiltCall,
     ONE_ON_ONE_VIDEO_CALL_CONFIG,
@@ -28,6 +28,16 @@ export default function CallPage(props) {
                 config={{
                     // ...ONE_ON_ONE_VOICE_CALL_CONFIG,
                     ...ONE_ON_ONE_VIDEO_CALL_CONFIG,
+
+                    avatarBuilder: ({userInfo}) => {
+                      return <View style={{width: '100%', height: '100%'}}>
+                       <Image
+                        style={{ width: '100%', height: '100%' }}
+                        resizeMode="cover"
+                        source={{ uri: `https://robohash.org/${userInfo.userID}.png` }}
+                        />
+                      </View>
+                    },
                     onHangUp: () => {
                         console.log('########CallPage onHangUp');
                         props.navigation.navigate('HomePage');
