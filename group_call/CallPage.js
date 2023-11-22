@@ -24,14 +24,14 @@ export default function CallPage(props) {
                     onHangUp: () => {
                         props.navigation.navigate('HomePage');
                     },
-                    durationConfig: {
-                        isVisible: true,
-                        onDurationUpdate: (duration) => {
-                            console.log('########CallPage onDurationUpdate', duration);
-                            if (duration === 5) {
-                                ZegoUIKitPrebuiltCallService.hangUp();
-                            }
+                    timingConfig: {
+                      isDurationVisible: true,
+                      onDurationUpdate: (duration) => {
+                        console.log('########CallWithInvitation onDurationUpdate', duration);
+                        if (duration === 10 * 60) {
+                          ZegoUIKitPrebuiltCallService.hangUp();
                         }
+                      }
                     },
                     avatarBuilder: ({userInfo}) => {
                       return <View style={{width: '100%', height: '100%'}}>

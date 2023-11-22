@@ -60,8 +60,8 @@ const onUserLogin = async (userID, userName, props) => {
       },
       requireConfig: (data) => {
         return {
-          durationConfig: {
-            isVisible: true,
+          timingConfig: {
+            isDurationVisible: true,
             onDurationUpdate: (duration) => {
               console.log('########CallWithInvitation onDurationUpdate', duration);
               if (duration === 10 * 60) {

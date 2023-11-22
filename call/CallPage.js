@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import { StyleSheet, View, Text, Button, Image } from 'react-native';
-import {
+import ZegoUIKitPrebuiltCallService, {
     ZegoUIKitPrebuiltCall,
     ONE_ON_ONE_VIDEO_CALL_CONFIG,
     ONE_ON_ONE_VOICE_CALL_CONFIG,
@@ -42,14 +42,14 @@ export default function CallPage(props) {
                         console.log('########CallPage onHangUp');
                         props.navigation.navigate('HomePage');
                     },
-                    durationConfig: {
-                        isVisible: true,
-                        onDurationUpdate: (duration) => {
-                            console.log('########CallPage onDurationUpdate', duration);
-                            if (duration === 10 * 60) {
-                                prebuiltRef.current.hangUp();
-                            }
+                    timingConfig: {
+                      isDurationVisible: true,
+                      onDurationUpdate: (duration) => {
+                        console.log('########CallWithInvitation onDurationUpdate', duration);
+                        if (duration === 10 * 60) {
+                          ZegoUIKitPrebuiltCallService.hangUp();
                         }
+                      }
                     },
                     topMenuBarConfig: {
                         buttons: [
