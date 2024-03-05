@@ -379,14 +379,16 @@ PODS:
     - React-Core
   - react-native-keep-awake (4.0.0):
     - React
+  - react-native-orientation-locker (1.6.0):
+    - React-Core
   - react-native-safe-area-context (4.7.4):
     - React-Core
   - react-native-zego-express-engine (3.2.0):
     - React
     - ZegoExpressEngine (= 3.2.0)
-  - react-native-zego-zim (2.10.0):
+  - react-native-zego-zim (2.12.1):
     - React
-    - ZIM (= 2.10.0)
+    - ZIM (= 2.12.1)
   - react-native-zego-zpns (2.5.0-alpha):
     - React
     - ZPNs (= 2.5.0)
@@ -523,14 +525,14 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
-  - zego-uikit-prebuilt-call-rn (4.3.0):
+  - zego-uikit-prebuilt-call-rn (4.4.3):
     - React-Core
-  - zego-uikit-rn (2.5.0):
+  - zego-uikit-rn (2.7.0):
     - React-Core
   - ZegoExpressEngine (3.2.0):
     - ZegoExpressEngine/Video (= 3.2.0)
   - ZegoExpressEngine/Video (3.2.0)
-  - ZIM (2.10.0)
+  - ZIM (2.12.1)
   - ZPNs (2.5.0)
 
 DEPENDENCIES:
@@ -580,6 +582,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-encrypted-storage (from `../node_modules/react-native-encrypted-storage`)
   - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
+  - react-native-orientation-locker (from `../node_modules/react-native-orientation-locker`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-zego-express-engine (from `../node_modules/zego-express-engine-reactnative`)
   - react-native-zego-zim (from `../node_modules/zego-zim-react-native`)
@@ -679,6 +682,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-encrypted-storage"
   react-native-keep-awake:
     :path: "../node_modules/react-native-keep-awake"
+  react-native-orientation-locker:
+    :path: "../node_modules/react-native-orientation-locker"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-zego-express-engine:
@@ -776,9 +781,10 @@ SPEC CHECKSUMS:
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
   react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
   react-native-keep-awake: afad8a51dfef9fe9655a6344771be32c8596d774
+  react-native-orientation-locker: 4409c5b12b65f942e75449872b4f078b6f27af81
   react-native-safe-area-context: 2cd91d532de12acdb0a9cbc8d43ac72a8e4c897c
   react-native-zego-express-engine: 47e48e9e647bc973827a04f0c09723a9f3421feb
-  react-native-zego-zim: be5c3093eb9fa72626e0d97db4dfe852c4ccd007
+  react-native-zego-zim: 8ccf8bca633b2a947b1407c9f2a76767c1667154
   react-native-zego-zpns: c546cad65af26567f2a7e0443c6573575786da60
   React-NativeModulesApple: c57f3efe0df288a6532b726ad2d0322a9bf38472
   React-perflogger: 6bd153e776e6beed54c56b0847e1220a3ff92ba5
@@ -806,12 +812,12 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
-  zego-uikit-prebuilt-call-rn: 8d8379ef75b6187699b39777959b7318a0a5467f
-  zego-uikit-rn: 916c0946b90c9e83e401f7ab160959dd87a521a6
+  zego-uikit-prebuilt-call-rn: efb72b41b765606746f7e55b4a0efc250408c8d0
+  zego-uikit-rn: bd18a350cc9281dabe016787fa87ed344c283d58
   ZegoExpressEngine: 7ddbd7134c03c45bfdcddb61f4d76a1486518425
-  ZIM: b0f5fdf211b723819043019373f9003d5e98420d
+  ZIM: 57ce22334b15f918ec13ce88e9632d3ebe36d5ba
   ZPNs: 3f73f4ee16eef87db96986d85b2c1b4e2286f4ee
 
 PODFILE CHECKSUM: fdcb352319772cf162bb1f3ad23aa5870ddcba4b
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.14.3
