@@ -18,6 +18,9 @@ import ZegoUIKitPrebuiltCallService, {
   ZegoCountdownLabel,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
 
+import ZegoUIKit from '@zegocloud/zego-uikit-rn'
+import Orientation from 'react-native-orientation-locker';
+
 const Stack = createNativeStackNavigator();
 
 
@@ -190,6 +193,27 @@ function HomeScreen(props) {
 
 
   useEffect(() => {
+
+    // Add screen orientation listener, and set the app Orientation to UIKit.
+    // App Orientation:
+    // 0 - PORTRAIT
+    // 1 - LANDSCAPE-LEFT
+    // 2 - PORTRAIT-UPSIDEDOWN
+    // 3 - LANDSCAPE-RIGHT
+    Orientation.addOrientationListener((orientation) => {
+      var orientationValue = 0;
+      if (orientation === 'PORTRAIT') {
+        orientationValue = 0;
+      } else if (orientation === 'LANDSCAPE-LEFT') {
+        orientationValue = 1;
+      } else if (orientation === 'LANDSCAPE-RIGHT') {
+        orientationValue = 3;
+      }
+      console.log('+++++++Orientation+++++++', orientation, orientationValue);
+      ZegoUIKit.setAppOrientation(orientationValue);
+    });
+
+
     // Simulated auto login if there is login info cache
     getUserInfo().then((info) => {
       if (info) {
