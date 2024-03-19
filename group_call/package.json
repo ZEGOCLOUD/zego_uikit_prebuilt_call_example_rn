@@ -14,7 +14,7 @@
     "react-native": "0.69.5",
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/native-stack": "^6.7.0",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^4.4.3",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^4.5.0",
     "@zegocloud/zego-uikit-rn": "^2.7.4",
     "react-delegate-component": "^1.0.0",
     "react-native-gesture-handler": "^2.5.0",
