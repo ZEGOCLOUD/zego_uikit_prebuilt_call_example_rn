@@ -98,7 +98,13 @@ const onUserLogin = async (userID, userName, props) => {
         }
       }
     }
-  );
+  ).then(() => {
+    ZegoUIKitPrebuiltCallService.requestSystemAlertWindow({
+      message: 'We need your consent for the following permissions in order to use the offline call function properly',
+      allow: 'Allow',
+      deny: 'Deny',
+    });
+  });
 }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Step 1: Config React Navigation
