@@ -13,8 +13,8 @@
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@react-navigation/native": "^6.1.0",
     "@react-navigation/native-stack": "^6.9.5",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^5.0.0",
-    "@zegocloud/zego-uikit-rn": "^2.9.0",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^5.1.0",
+    "@zegocloud/zego-uikit-rn": "^2.9.1",
     "react": "^18.2.0",
     "react-delegate-component": "^1.0.0",
     "react-native": "0.72.3",
@@ -26,7 +26,7 @@
     "react-native-sound": "^0.11.2",
     "zego-express-engine-reactnative": "^3.14.5",
     "zego-zim-react-native": "2.12.1",
-    "zego-zpns-react-native": "2.5.0-alpha"
+    "zego-zpns-react-native": "2.5.2-alpha"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
