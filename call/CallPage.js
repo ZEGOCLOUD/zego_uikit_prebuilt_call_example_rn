@@ -38,8 +38,8 @@ export default function CallPage(props) {
                         />
                       </View>
                     },
-                    onHangUp: () => {
-                        console.log('########CallPage onHangUp');
+                    onCallEnd: (callID, reason, duration) => {
+                        console.log('########CallPage onCallEnd');
                         props.navigation.navigate('HomePage');
                     },
                     timingConfig: {

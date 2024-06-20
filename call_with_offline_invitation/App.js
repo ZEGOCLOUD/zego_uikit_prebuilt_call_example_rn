@@ -68,8 +68,8 @@ const onUserLogin = async (userID, userName, props) => {
       },
       requireConfig: (data) => {
         return {
-          onHangUp: (duration) => {
-            console.log('########CallWithInvitation onHangUp', duration);
+          onCallEnd: (callID, reason, duration) => {
+            console.log('########CallWithInvitation onCallEnd', callID, reason, duration);
             props.navigation.navigate('HomeScreen');
           },
           foregroundBuilder: () => <ZegoCountdownLabel maxDuration={60} onCountdownFinished={() => { console.log("Countdown finished!!"); ZegoUIKitPrebuiltCallService.hangUp(); }} />,

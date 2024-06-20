@@ -319,7 +319,7 @@ PODS:
     - React-Core
   - react-native-keep-awake (4.0.0):
     - React
-  - react-native-safe-area-context (4.7.4):
+  - react-native-safe-area-context (4.10.1):
     - React-Core
   - react-native-zego-express-engine (3.14.5):
     - React
@@ -327,7 +327,7 @@ PODS:
   - react-native-zego-zim (2.12.1):
     - React
     - ZIM (= 2.12.1)
-  - react-native-zego-zpns (2.5.0-alpha):
+  - react-native-zego-zpns (2.5.2-alpha):
     - React
     - ZPNs (= 2.5.0)
   - React-NativeModulesApple (0.72.3):
@@ -440,13 +440,14 @@ PODS:
     - React-jsi (= 0.72.3)
     - React-logger (= 0.72.3)
     - React-perflogger (= 0.72.3)
-  - RNCAsyncStorage (1.19.4):
+  - RNCAsyncStorage (1.23.1):
     - React-Core
-  - RNDeviceInfo (10.11.0):
+  - RNDeviceInfo (10.14.0):
     - React-Core
-  - RNScreens (3.27.0):
+  - RNScreens (3.31.1):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
+    - React-RCTImage
   - RNSound (0.11.2):
     - React-Core
     - RNSound/Core (= 0.11.2)
@@ -454,9 +455,9 @@ PODS:
     - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
-  - zego-uikit-prebuilt-call-rn (5.0.0):
+  - zego-uikit-prebuilt-call-rn (5.3.0):
     - React-Core
-  - zego-uikit-rn (2.9.0):
+  - zego-uikit-rn (2.10.0):
     - React-Core
   - ZegoExpressEngine (3.14.5)
   - ZIM (2.12.1)
@@ -657,10 +658,10 @@ SPEC CHECKSUMS:
   React-logger: c5b527272d5f22eaa09bb3c3a690fee8f237ae95
   react-native-encrypted-storage: db300a3f2f0aba1e818417c1c0a6be549038deb7
   react-native-keep-awake: afad8a51dfef9fe9655a6344771be32c8596d774
-  react-native-safe-area-context: 2cd91d532de12acdb0a9cbc8d43ac72a8e4c897c
+  react-native-safe-area-context: dcab599c527c2d7de2d76507a523d20a0b83823d
   react-native-zego-express-engine: 0dea531a42c910c9ccbc8647a54c4f68b27192fd
   react-native-zego-zim: 8ccf8bca633b2a947b1407c9f2a76767c1667154
-  react-native-zego-zpns: c546cad65af26567f2a7e0443c6573575786da60
+  react-native-zego-zpns: 134f8fa4c070aa5d7db639d8ec729ea73369b0fe
   React-NativeModulesApple: c57f3efe0df288a6532b726ad2d0322a9bf38472
   React-perflogger: 6bd153e776e6beed54c56b0847e1220a3ff92ba5
   React-RCTActionSheet: c0b62af44e610e69d9a2049a682f5dba4e9dff17
@@ -678,14 +679,14 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 837c1bebd2f84572db17698cd702ceaf585b0d9a
   React-utils: bcb57da67eec2711f8b353f6e3d33bd8e4b2efa3
   ReactCommon: 3ccb8fb14e6b3277e38c73b0ff5e4a1b8db017a9
-  RNCAsyncStorage: 3a8f7145d17cdd9f88e7b77666c94a09e4f759c8
-  RNDeviceInfo: bf8a32acbcb875f568217285d1793b0e8588c974
-  RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
+  RNCAsyncStorage: 826b603ae9c0f88b5ac4e956801f755109fa4d5c
+  RNDeviceInfo: 59344c19152c4b2b32283005f9737c5c64b42fba
+  RNScreens: 93ae3be2f119d955620f9bbb39ad372adb53b7a9
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
-  zego-uikit-prebuilt-call-rn: 44d472b9ee02f109a9fd9fb6ac85e47849416ead
-  zego-uikit-rn: e178875ef9d959ee61dd7c16b7ce0317f5af706b
+  zego-uikit-prebuilt-call-rn: 04a1bf05abf6231ebf254aeb3512ff52a5bb6ce6
+  zego-uikit-rn: 2c555e4ca54d2f0d3cf3cd27f5e321e7bd07f839
   ZegoExpressEngine: 68629fb936bc779260ce7d5cb3eea5b467dffa18
   ZIM: 57ce22334b15f918ec13ce88e9632d3ebe36d5ba
   ZPNs: 3f73f4ee16eef87db96986d85b2c1b4e2286f4ee

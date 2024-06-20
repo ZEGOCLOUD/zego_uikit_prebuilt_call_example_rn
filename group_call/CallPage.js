@@ -21,8 +21,8 @@ export default function CallPage(props) {
                 config={{
                     // ...GROUP_VOICE_CALL_CONFIG,
                     ...GROUP_VIDEO_CALL_CONFIG,
-                    onHangUp: () => {
-                        props.navigation.navigate('HomePage');
+                    onCallEnd: (callID, reason, duration) => {
+                      props.navigation.navigate('HomePage');
                     },
                     timingConfig: {
                       isDurationVisible: true,
