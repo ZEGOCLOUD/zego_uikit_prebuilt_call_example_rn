@@ -10,7 +10,10 @@ import ZegoUIKitPrebuiltCallService from '@zegocloud/zego-uikit-prebuilt-call-rn
 import * as ZIM from 'zego-zim-react-native';
 import * as ZPNs from 'zego-zpns-react-native';
 
-
-ZegoUIKitPrebuiltCallService.useSystemCallingUI([ZIM, ZPNs]);
+// CallKit only for ios
+const CallKit = Platform.OS === 'ios' ? require('zego-callkit-react-native') : null;
+ZegoUIKitPrebuiltCallService.useSystemCallingUI(plugins = (
+    Platform.OS === 'ios' ? [ZIM, ZPNs, CallKit] : [ZIM, ZPNs]
+));
 
 AppRegistry.registerComponent(appName, () => App);
