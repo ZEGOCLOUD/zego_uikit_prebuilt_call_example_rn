@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, Image, } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useFocusEffect, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import KeyCenter from './KeyCenter';
 import { getFirstInstallTime } from 'react-native-device-info'
@@ -99,11 +99,6 @@ const onUserLogin = async (userID, userName, props) => {
       }
     }
   ).then(() => {
-    ZegoUIKitPrebuiltCallService.requestSystemAlertWindow({
-      message: 'We need your consent for the following permissions in order to use the offline call function properly',
-      allow: 'Allow',
-      deny: 'Deny',
-    });
   });
 }
 
@@ -207,6 +202,19 @@ function HomeScreen(props) {
       }
     })
   }, [])
+
+  useFocusEffect(
+    React.useCallback(() => {
+        getUserInfo().then((info) => {
+            if (info) {
+              setUserID(info.userID)
+            }
+        })
+        
+        return () => {
+        };
+    }, [])
+  );
 
   return (
     <TouchableWithoutFeedback onPress={blankPressedHandle}>
