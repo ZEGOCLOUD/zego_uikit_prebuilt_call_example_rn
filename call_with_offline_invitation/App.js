@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, Im
 import { NavigationContainer, useFocusEffect, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import KeyCenter from './KeyCenter';
-import { getFirstInstallTime } from 'react-native-device-info'
+import DeviceInfo, { getFirstInstallTime } from 'react-native-device-info'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as ZIM from 'zego-zim-react-native';
@@ -16,7 +16,10 @@ import ZegoUIKitPrebuiltCallService, {
   ZegoMenuBarButtonName,
   ZegoUIKitPrebuiltCallFloatingMinimizedView,
   ZegoCountdownLabel,
+  ZegoMultiCertificate,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import Orientation from 'react-native-orientation-locker';
+import ZegoUIKit from '@zegocloud/zego-uikit-rn'
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +60,7 @@ const onUserLogin = async (userID, userName, props) => {
         channelID: "ZegoUIKit",
         channelName: "ZegoUIKit",
       },
+      certificateIndex: ZegoMultiCertificate.first,
       avatarBuilder: ({userInfo}) => {
         return <View style={{width: '100%', height: '100%'}}>
          <Image 
@@ -66,15 +70,57 @@ const onUserLogin = async (userID, userName, props) => {
           />
         </View>
       },
+      waitingPageConfig: {
+        
+      },
+      requireInviterConfig: {
+        enabled: true,
+        detectSeconds: 5,
+      },
+      showDeclineButton: true,
+      innerText: {
+
+      },
+      onIncomingCallDeclineButtonPressed: (navigation) => {
+        console.log('[onIncomingCallDeclineButtonPressed]');
+      },
+      onIncomingCallAcceptButtonPressed: (navigation) => {
+        console.log('[onIncomingCallAcceptButtonPressed]');
+      },
+      onOutgoingCallCancelButtonPressed: (navigation, callID, invitees, type) => {
+        console.log('[onOutgoingCallCancelButtonPressed]+++',navigation, callID, invitees, type);
+      },
+      onIncomingCallReceived: (callID, inviter, type, invitees, customData) => {
+        console.log('[Incoming call]+++', callID, inviter, type, invitees, customData)
+      },
+      onIncomingCallCanceled: (callID, inviter) => {
+        console.log('[onIncomingCallCanceled]+++', callID, inviter);
+      },
+      onIncomingCallTimeout: (callID, inviter) => {
+        console.log('[onIncomingCallTimeout]+++', callID, inviter);
+      },
+      onOutgoingCallAccepted: (callID, invitee) => {
+        console.log('[onOutgoingCallAccepted]+++', callID, invitee);
+      },
+      onOutgoingCallRejectedCauseBusy: (callID, invitee) => {
+        console.log('[onOutgoingCallRejectedCauseBusy]+++', callID, invitee);
+      },
+      onOutgoingCallDeclined: (callID, invitee) => {
+        console.log('[onOutgoingCallDeclined]+++', callID, invitee);
+      },
+      onOutgoingCallTimeout: (callID, invitees) => {
+        console.log('[onOutgoingCallTimeout]+++', callID, invitees);
+      },
       requireConfig: (data) => {
+        console.log('requireConfig, callID: ', data.callID);
         return {
+          turnOnMicrophoneWhenJoining: true,
           onCallEnd: (callID, reason, duration) => {
             console.log('########CallWithInvitation onCallEnd', callID, reason, duration);
             props.navigation.navigate('HomeScreen');
           },
-          foregroundBuilder: () => <ZegoCountdownLabel maxDuration={60} onCountdownFinished={() => { console.log("Countdown finished!!"); ZegoUIKitPrebuiltCallService.hangUp(); }} />,
           timingConfig: {
-            isDurationVisible: false,
+            isDurationVisible: true,
             onDurationUpdate: (duration) => {
               console.log('########CallWithInvitation onDurationUpdate', duration);
               if (duration === 10 * 60) {
@@ -191,6 +237,20 @@ function HomeScreen(props) {
 
 
   useEffect(() => {
+
+    Orientation.addOrientationListener((orientation) => {
+      var orientationValue = 0;
+      if (orientation === 'PORTRAIT') {
+        orientationValue = 0;
+      } else if (orientation === 'LANDSCAPE-LEFT') {
+        orientationValue = 1;
+      } else if (orientation === 'LANDSCAPE-RIGHT') {
+        orientationValue = 3;
+      }
+      console.log('+++++++Orientation+++++++', orientation, orientationValue);
+      ZegoUIKit.setAppOrientation(orientationValue);
+    });
+
     // Simulated auto login if there is login info cache
     getUserInfo().then((info) => {
       if (info) {
@@ -217,6 +277,7 @@ function HomeScreen(props) {
   );
 
   return (
+
     <TouchableWithoutFeedback onPress={blankPressedHandle}>
       <View style={styles.container}>
         <Text>Your user id: {userID}</Text>
@@ -243,7 +304,13 @@ function HomeScreen(props) {
           />
         </View>
         <View style={{ width: 220, marginTop: 100 }}>
-          <Button title='Back To Login Screen' onPress={() => { props.navigation.navigate('LoginScreen') }}></Button>
+          <Button title='Back To Login Screen' onPress={() => { 
+            props.navigation.navigate('LoginScreen')
+            ZegoUIKitPrebuiltCallService.uninit();
+          }}></Button>
+        </View>
+        <View style={{ marginTop: 30 }}>
+          <Text>App Version: {DeviceInfo.getVersion()}.{DeviceInfo.getBuildNumber()}</Text>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -255,7 +322,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "gray"
+    backgroundColor: '#A3A3A3'
   },
   inputContainer: {
     flexDirection: 'row',

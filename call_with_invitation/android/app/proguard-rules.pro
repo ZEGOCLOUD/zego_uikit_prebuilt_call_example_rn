@@ -8,3 +8,6 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+-keep class com.google.android.gms.common.** {*;}
+-keep class **.zego.**  { *; }
+-keep class **.**.zego_zpns.** { *; }

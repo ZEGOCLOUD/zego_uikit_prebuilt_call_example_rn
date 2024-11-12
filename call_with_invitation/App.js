@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, Image, } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useFocusEffect, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import KeyCenter from './KeyCenter';
 import { getFirstInstallTime } from 'react-native-device-info'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as ZIM from 'zego-zim-react-native';
+
 import ZegoUIKitPrebuiltCallService, {
   ZegoCallInvitationDialog,
   ZegoUIKitPrebuiltCallWaitingScreen,
@@ -15,6 +16,8 @@ import ZegoUIKitPrebuiltCallService, {
   ZegoMenuBarButtonName,
   ZegoUIKitPrebuiltCallFloatingMinimizedView,
 } from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import Orientation from 'react-native-orientation-locker';
+import ZegoUIKit from '@zegocloud/zego-uikit-rn'
 
 const Stack = createNativeStackNavigator();
 
@@ -51,14 +54,52 @@ const onUserLogin = async (userID, userName, props) => {
       },
       avatarBuilder: ({userInfo}) => {
         return <View style={{width: '100%', height: '100%'}}>
-         <Image
+         <Image 
           style={{ width: '100%', height: '100%' }}
           resizeMode="cover"
           source={{ uri: `https://robohash.org/${userInfo.userID}.png` }}
           />
         </View>
       },
+      waitingPageConfig: {
+        
+      },
+      requireInviterConfig: {
+        enabled: true,
+        detectSeconds: 5,
+      },
+      onIncomingCallDeclineButtonPressed: (navigation) => {
+
+      },
+      onIncomingCallAcceptButtonPressed: (navigation) => {
+
+      },
+      onOutgoingCallCancelButtonPressed: (navigation, callID, invitees, type) => {
+        console.log('[onOutgoingCallCancelButtonPressed]+++',navigation, callID, invitees, type);
+      },
+      onIncomingCallReceived: (callID, inviter, type, invitees, customData) => {
+        console.log('[Incoming call]+++', callID, inviter, type, invitees, customData)
+      },
+      onIncomingCallCanceled: (callID, inviter) => {
+        console.log('[onIncomingCallCanceled]+++', callID, inviter);
+      },
+      onIncomingCallTimeout: (callID, inviter) => {
+        console.log('[onIncomingCallTimeout]+++', callID, inviter);
+      },
+      onOutgoingCallAccepted: (callID, invitee) => {
+        console.log('[onOutgoingCallAccepted]+++', callID, invitee);
+      },
+      onOutgoingCallRejectedCauseBusy: (callID, invitee) => {
+        console.log('[onOutgoingCallRejectedCauseBusy]+++', callID, invitee);
+      },
+      onOutgoingCallDeclined: (callID, invitee) => {
+        console.log('[onOutgoingCallDeclined]+++', callID, invitee);
+      },
+      onOutgoingCallTimeout: (callID, invitees) => {
+        console.log('[onOutgoingCallTimeout]+++', callID, invitees);
+      },
       requireConfig: (data) => {
+        console.log('requireConfig, callID: ', data.callID);
         return {
           timingConfig: {
             isDurationVisible: true,
@@ -85,7 +126,8 @@ const onUserLogin = async (userID, userName, props) => {
         }
       }
     }
-  );
+  ).then(() => {
+  });
 }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Step 1: Config React Navigation
@@ -177,6 +219,20 @@ function HomeScreen(props) {
 
 
   useEffect(() => {
+
+    Orientation.addOrientationListener((orientation) => {
+      var orientationValue = 0;
+      if (orientation === 'PORTRAIT') {
+        orientationValue = 0;
+      } else if (orientation === 'LANDSCAPE-LEFT') {
+        orientationValue = 1;
+      } else if (orientation === 'LANDSCAPE-RIGHT') {
+        orientationValue = 3;
+      }
+      console.log('+++++++Orientation+++++++', orientation, orientationValue);
+      ZegoUIKit.setAppOrientation(orientationValue);
+    });
+
     // Simulated auto login if there is login info cache
     getUserInfo().then((info) => {
       if (info) {
@@ -189,7 +245,21 @@ function HomeScreen(props) {
     })
   }, [])
 
+  useFocusEffect(
+    React.useCallback(() => {
+        getUserInfo().then((info) => {
+            if (info) {
+              setUserID(info.userID)
+            }
+        })
+        
+        return () => {
+        };
+    }, [])
+  );
+
   return (
+
     <TouchableWithoutFeedback onPress={blankPressedHandle}>
       <View style={styles.container}>
         <Text>Your user id: {userID}</Text>
@@ -214,7 +284,10 @@ function HomeScreen(props) {
           />
         </View>
         <View style={{ width: 220, marginTop: 100 }}>
-          <Button title='Back To Login Screen' onPress={() => { props.navigation.navigate('LoginScreen') }}></Button>
+          <Button title='Back To Login Screen' onPress={() => { 
+            props.navigation.navigate('LoginScreen')
+            ZegoUIKitPrebuiltCallService.uninit();
+          }}></Button>
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -226,7 +299,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "gray"
+    backgroundColor: '#A3A3A3'
   },
   inputContainer: {
     flexDirection: 'row',
