@@ -33,8 +33,8 @@
     "zego-express-engine-reactnative": "^3.17.1",
     "zego-zim-react-native": "2.16.0",
 
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.0.2",
-    "@zegocloud/zego-uikit-rn": "^2.14.7",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "6.1.6-beta",
+    "@zegocloud/zego-uikit-rn": "2.15.4-beta",
 
     "@react-navigation/native": "^6.0.0",
     "@react-navigation/native-stack": "^6.11.0",
