@@ -1253,6 +1253,9 @@ PODS:
   - react-native-zego-zim (2.19.0):
     - React
     - ZIM (= 2.19.0)
+  - react-native-zego-zpns (2.6.6):
+    - React
+    - ZPNs (= 2.6.0)
   - React-nativeconfig (0.75.4)
   - React-NativeModulesApple (0.75.4):
     - glog
@@ -1556,6 +1559,7 @@ PODS:
   - ZegoExpressPrivate/Default (3.17.1.41087)
   - ZegoUIKitReport (0.2.10)
   - ZIM (2.19.0)
+  - ZPNs (2.6.0)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -1602,6 +1606,7 @@ DEPENDENCIES:
   - react-native-zego-callkit (from `../node_modules/zego-callkit-react-native`)
   - react-native-zego-express-engine (from `../node_modules/zego-express-engine-reactnative`)
   - react-native-zego-zim (from `../node_modules/zego-zim-react-native`)
+  - react-native-zego-zpns (from `../node_modules/zego-zpns-react-native`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -1642,6 +1647,7 @@ SPEC REPOS:
     - ZegoExpressPrivate
     - ZegoUIKitReport
     - ZIM
+    - ZPNs
 
 EXTERNAL SOURCES:
   boost:
@@ -1729,6 +1735,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/zego-express-engine-reactnative"
   react-native-zego-zim:
     :path: "../node_modules/zego-zim-react-native"
+  react-native-zego-zpns:
+    :path: "../node_modules/zego-zpns-react-native"
   React-nativeconfig:
     :path: "../node_modules/react-native/ReactCommon"
   React-NativeModulesApple:
@@ -1839,6 +1847,7 @@ SPEC CHECKSUMS:
   react-native-zego-callkit: 3449cb5b012f89acf8eebae39ebc2c4928b720a7
   react-native-zego-express-engine: 564c14c5a32c42eb9771e83fdd8e710fa9c21b29
   react-native-zego-zim: f52f1b0666bb5dfa89bfb81852ed8f7eb162497f
+  react-native-zego-zpns: d488f5d1701e62fe1e858c598cbf31ac5fbd1574
   React-nativeconfig: 8c83d992b9cc7d75b5abe262069eaeea4349f794
   React-NativeModulesApple: 97f606f09fd9840b3868333984d6a0e7bcc425b5
   React-perflogger: 59e1a3182dca2cee7b9f1f7aab204018d46d1914
@@ -1876,6 +1885,7 @@ SPEC CHECKSUMS:
   ZegoExpressPrivate: d20ad3b1ed0af40f0c00ccdd977e3f8ab8d015a8
   ZegoUIKitReport: a993f7ccc5d243998a7e601a60e16fcd6c084417
   ZIM: 0844778ce190690fdf043ec45bb14b2f060b358b
+  ZPNs: 73bad0046a74e37315201053f9a0e7ac625d9436
 
 PODFILE CHECKSUM: 2c72ba02c1c956f656987bbfb191bb96523d25f2
 
