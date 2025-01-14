@@ -35,8 +35,8 @@
     "zego-zim-react-native": "2.19.0",
     "zego-zpns-react-native": "^2.6.6",
 
-    "@zegocloud/zego-uikit-rn": "^2.17.0",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.1",
+    "@zegocloud/zego-uikit-rn": "^2.17.1",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.2",
 
     "@react-navigation/native": "^6.0.0",
     "@react-navigation/native-stack": "^6.11.0",

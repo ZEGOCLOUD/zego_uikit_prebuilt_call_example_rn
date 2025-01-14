@@ -2896,13 +2896,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zegocloud/zego-uikit-prebuilt-call-rn@npm:^6.3.1":
-  version: 6.3.1
-  resolution: "@zegocloud/zego-uikit-prebuilt-call-rn@npm:6.3.1"
+"@zegocloud/zego-uikit-prebuilt-call-rn@npm:^6.3.2":
+  version: 6.3.2
+  resolution: "@zegocloud/zego-uikit-prebuilt-call-rn@npm:6.3.2"
   peerDependencies:
     "@react-navigation/native": "*"
     "@react-navigation/native-stack": "*"
-    "@zegocloud/zego-uikit-rn": ">=2.17.0"
+    "@zegocloud/zego-uikit-rn": ">=2.17.1"
     react: "*"
     react-delegate-component: "*"
     react-native: "*"
@@ -2911,20 +2911,20 @@ __metadata:
     react-native-safe-area-context: "*"
     react-native-screens: ">=3.0.0"
     react-native-sound: "*"
-  checksum: 509fa970e37538dc282005f334a826e6a7ab77237cc2ac19fa52c536e50a2be00fe02e6b31098598ecd61f5b658b0dc674fa48f7cda7f39b090f48b54640b9b2
+  checksum: cf31939732b9362cada142e7d447a24f8cb4398bc3135d81d49e94438964d1bebfaf90352721978f8dd93c2e8c6db0f05c156dcad0140c0fe6cd60933168ff84
   languageName: node
   linkType: hard
 
-"@zegocloud/zego-uikit-rn@npm:^2.17.0":
-  version: 2.17.0
-  resolution: "@zegocloud/zego-uikit-rn@npm:2.17.0"
+"@zegocloud/zego-uikit-rn@npm:^2.17.1":
+  version: 2.17.1
+  resolution: "@zegocloud/zego-uikit-rn@npm:2.17.1"
   peerDependencies:
     react: "*"
     react-delegate-component: "*"
     react-native: "*"
     zego-express-engine-reactnative: ^3.17.2
     zego-zim-react-native: 2.19.0
-  checksum: 1eb3a3fe1e73ce24c03f5d85d49040d7a0c2dafc0f15605435be9d8c0f2456149a02fe955b4316c9b52212b59c81b4f51e3f544fd262a1987b95b4caf6ab9b1b
+  checksum: dd420e4b07b6f1ff59e9af378a541f02a6e7ae2cf0a00db220b346c14cf226c65f39054d8115a3808b98d8442d4664589e0d3147a311c36d5008d06385768cb6
   languageName: node
   linkType: hard
 
@@ -9895,8 +9895,8 @@ __metadata:
     "@react-navigation/native-stack": ^6.11.0
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
-    "@zegocloud/zego-uikit-prebuilt-call-rn": ^6.3.1
-    "@zegocloud/zego-uikit-rn": ^2.17.0
+    "@zegocloud/zego-uikit-prebuilt-call-rn": ^6.3.2
+    "@zegocloud/zego-uikit-rn": ^2.17.1
     babel-jest: ^29.6.3
     eslint: ^8.19.0
     jest: ^29.6.3

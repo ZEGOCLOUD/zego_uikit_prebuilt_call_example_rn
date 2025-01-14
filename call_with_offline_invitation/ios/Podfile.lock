@@ -1549,9 +1549,9 @@ PODS:
     - React-Core
   - SocketRocket (0.7.0)
   - Yoga (0.0.0)
-  - zego-uikit-prebuilt-call-rn (6.3.1):
+  - zego-uikit-prebuilt-call-rn (6.3.2):
     - React-Core
-  - zego-uikit-rn (2.17.0):
+  - zego-uikit-rn (2.17.1):
     - React-Core
     - ZegoUIKitReport (= 0.2.10)
   - ZegoExpressPrivate (3.17.1.41087):
@@ -1880,8 +1880,8 @@ SPEC CHECKSUMS:
   RNSound: 314cc5226453ef4a3314a196c65e8a65e5106a7b
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 055f92ad73f8c8600a93f0e25ac0b2344c3b07e6
-  zego-uikit-prebuilt-call-rn: defae89b725eaede2ffc19cbd85b66d81230018b
-  zego-uikit-rn: 04c698c620e2701a4278389eb6ccaa9c1fce6434
+  zego-uikit-prebuilt-call-rn: 2387a2f5623023513224e9934077f571904f9c15
+  zego-uikit-rn: 93a4c1cae3c9f4b34cb576524c86d647bb376ad9
   ZegoExpressPrivate: d20ad3b1ed0af40f0c00ccdd977e3f8ab8d015a8
   ZegoUIKitReport: a993f7ccc5d243998a7e601a60e16fcd6c084417
   ZIM: 0844778ce190690fdf043ec45bb14b2f060b358b

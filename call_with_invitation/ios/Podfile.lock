@@ -1245,8 +1245,6 @@ PODS:
     - React-Core
   - react-native-safe-area-context (4.14.1):
     - React-Core
-  - react-native-zego-callkit (1.0.6):
-    - React
   - react-native-zego-express-engine (3.17.2):
     - React
     - ZegoExpressPrivate (= 3.17.1.41087)
@@ -1546,9 +1544,9 @@ PODS:
     - React-Core
   - SocketRocket (0.7.0)
   - Yoga (0.0.0)
-  - zego-uikit-prebuilt-call-rn (6.3.1):
+  - zego-uikit-prebuilt-call-rn (6.3.2):
     - React-Core
-  - zego-uikit-rn (2.17.0):
+  - zego-uikit-rn (2.17.1):
     - React-Core
     - ZegoUIKitReport (= 0.2.10)
   - ZegoExpressPrivate (3.17.1.41087):
@@ -1599,7 +1597,6 @@ DEPENDENCIES:
   - react-native-keep-awake (from `../node_modules/react-native-keep-awake`)
   - react-native-orientation-locker (from `../node_modules/react-native-orientation-locker`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-zego-callkit (from `../node_modules/zego-callkit-react-native`)
   - react-native-zego-express-engine (from `../node_modules/zego-express-engine-reactnative`)
   - react-native-zego-zim (from `../node_modules/zego-zim-react-native`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
@@ -1723,8 +1720,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-orientation-locker"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-zego-callkit:
-    :path: "../node_modules/zego-callkit-react-native"
   react-native-zego-express-engine:
     :path: "../node_modules/zego-express-engine-reactnative"
   react-native-zego-zim:
@@ -1836,7 +1831,6 @@ SPEC CHECKSUMS:
   react-native-keep-awake: 21ff40767cde4bd81021ffee12480aee4b5b91bb
   react-native-orientation-locker: cc6f357b289a2e0dd2210fea0c52cb8e0727fdaa
   react-native-safe-area-context: 758e894ca5a9bd1868d2a9cfbca7326a2b6bf9dc
-  react-native-zego-callkit: 3449cb5b012f89acf8eebae39ebc2c4928b720a7
   react-native-zego-express-engine: 564c14c5a32c42eb9771e83fdd8e710fa9c21b29
   react-native-zego-zim: f52f1b0666bb5dfa89bfb81852ed8f7eb162497f
   React-nativeconfig: 8c83d992b9cc7d75b5abe262069eaeea4349f794
@@ -1871,8 +1865,8 @@ SPEC CHECKSUMS:
   RNSound: 314cc5226453ef4a3314a196c65e8a65e5106a7b
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   Yoga: 055f92ad73f8c8600a93f0e25ac0b2344c3b07e6
-  zego-uikit-prebuilt-call-rn: defae89b725eaede2ffc19cbd85b66d81230018b
-  zego-uikit-rn: 04c698c620e2701a4278389eb6ccaa9c1fce6434
+  zego-uikit-prebuilt-call-rn: 2387a2f5623023513224e9934077f571904f9c15
+  zego-uikit-rn: 93a4c1cae3c9f4b34cb576524c86d647bb376ad9
   ZegoExpressPrivate: d20ad3b1ed0af40f0c00ccdd977e3f8ab8d015a8
   ZegoUIKitReport: a993f7ccc5d243998a7e601a60e16fcd6c084417
   ZIM: 0844778ce190690fdf043ec45bb14b2f060b358b

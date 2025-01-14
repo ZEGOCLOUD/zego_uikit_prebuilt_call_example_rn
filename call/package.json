@@ -30,12 +30,11 @@
     "react-test-renderer": "18.3.1",
     "typescript": "5.0.4",
 
-    "zego-callkit-react-native": "^1.0.6",
     "zego-express-engine-reactnative": "^3.17.2",
     "zego-zim-react-native": "2.19.0",
 
-    "@zegocloud/zego-uikit-rn": "^2.17.0",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.1",
+    "@zegocloud/zego-uikit-rn": "^2.17.1",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.2",
 
     "@react-navigation/native": "^6.0.0",
     "@react-navigation/native-stack": "^6.11.0",
