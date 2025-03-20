@@ -21,6 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+Podfile.lock
 
 # Android/IntelliJ
 #
@@ -72,8 +73,3 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-**KeyCenter.js
-!.KeyCenter.js
-Gemfile.lock
-.bundle
