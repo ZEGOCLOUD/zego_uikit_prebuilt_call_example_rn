@@ -39,12 +39,12 @@
     "zego-zpns-react-native": "^2.8.1",
 
     "@zegocloud/zego-uikit-rn": "^2.17.9",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.11",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.12",
 
-    "@react-navigation/native": "^7.1.9",
-    "@react-navigation/native-stack": "^7.3.13",
-    "react-native-safe-area-context": "^5.4.0",
-    "react-native-screens": "^4.10.0",
+    "@react-navigation/native": "^6.0.0",
+    "@react-navigation/native-stack": "^6.11.0",
+    "react-native-safe-area-context": "^4.7.1",
+    "react-native-screens": ">=3.33.0 <3.36.0",
 
     "@react-native-async-storage/async-storage": "^2.1.2",
     "react-delegate-component": "^1.0.0",
