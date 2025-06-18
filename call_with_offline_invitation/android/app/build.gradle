@@ -125,10 +125,11 @@ dependencies {
     }
 
     // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
 
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'im.zego:zpns-fcm:2.8.0' // ZPNs use for Google FCM push
 }
