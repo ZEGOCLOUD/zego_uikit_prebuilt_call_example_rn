@@ -98,7 +98,7 @@ export const onUserLogin = async (userID, userName, props) => {
             timingConfig: {
               isDurationVisible: true,
               onDurationUpdate: (duration) => {
-                console.log('########CallWithInvitation onDurationUpdate', duration);
+                console.log('########CallWithInvitation onDurationUpdate', userID, duration);
                 if (duration === 10 * 60) {
                   ZegoUIKitPrebuiltCallService.hangUp();
                 }

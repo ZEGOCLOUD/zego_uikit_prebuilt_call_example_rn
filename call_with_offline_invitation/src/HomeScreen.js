@@ -94,7 +94,9 @@ export default function HomeScreen(props) {
           <View style={styles.inputContainer}>
             <TextInput
               ref={viewRef}
-              style={styles.input}
+              style={[styles.input,
+                {fontSize: Platform.OS === 'ios' ? 16 : 14}
+              ]}
               onChangeText={changeTextHandle}
               placeholder="Invitees ID, Separate ids by ','"
             />
@@ -167,6 +169,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   input: {
+    width: 230,
+    paddingBottom: 5,
     borderBottomWidth: 1,
     borderBottomColor: '#dddddd',
   },
