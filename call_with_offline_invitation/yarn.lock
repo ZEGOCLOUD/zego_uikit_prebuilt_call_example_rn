@@ -2055,15 +2055,15 @@
   resolved "https://registry.npmmirror.com/@vscode/sudo-prompt/-/sudo-prompt-9.3.1.tgz#c562334bc6647733649fd42afc96c0eea8de3b65"
   integrity sha512-9ORTwwS74VaTn38tNbQhsA5U44zkJfcb0BdTSyyG6frP4e8KMtHuTXYmwefe5dpL8XB1aGSIVTaLjD3BbWb5iA==
 
-"@zegocloud/zego-uikit-prebuilt-call-rn@^6.3.15":
-  version "6.3.15"
-  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-call-rn/-/zego-uikit-prebuilt-call-rn-6.3.15.tgz#bcf06da72295e9ff933b1c853c22505d9e199368"
-  integrity sha512-qHJJm5QOy+PjbiLxeLoCgHjOPpv1ytysoEuRV5PK+OPYBrqSfcozEf5YEGfAl2WWKIm/d77mEbaBvQDTOzPl/g==
+"@zegocloud/zego-uikit-prebuilt-call-rn@^6.3.18-beta":
+  version "6.3.18-beta"
+  resolved "https://registry.npmmirror.com/@zegocloud/zego-uikit-prebuilt-call-rn/-/zego-uikit-prebuilt-call-rn-6.3.18-beta.tgz#378fb405255c3dd0faf459dffa416d4ab79e5297"
+  integrity sha512-WoqBRl/XisHCP8cNz9pfShWdIGDmH/QMgtTBRgsu6USDeqFOZ0bD+/xlsPnbzPIUmZJZ11z2g1HiJdi4jQthSQ==
 
-"@zegocloud/zego-uikit-rn@^2.17.9":
-  version "2.17.9"
-  resolved "https://registry.npmmirror.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.17.9.tgz#c150eaec4315b700c45930423aace0012df58ac6"
-  integrity sha512-hGLWw87z+iMB/19/tkeb+jn0hT6WJSzccOQxCezQd1uP85ZCweiWYGamHfc8nH+ZoWYjnxhN9RQZ0uI290in7A==
+"@zegocloud/zego-uikit-rn@^2.17.11":
+  version "2.17.11"
+  resolved "https://registry.npmmirror.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.17.11.tgz#27c0ee04288225a38b4beabce25fafe04dd3d769"
+  integrity sha512-0fo7KYiwBOfTLuLdjEBqPE4Eb/quSPzbCrC4jJlbwnHavDD6hIIFCy/3doD1AGQ/q/m2gZFtVw4NeCpPoJwIaw==
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -5533,23 +5533,22 @@ react-native-orientation-locker@^1.7.0:
   resolved "https://registry.npmmirror.com/react-native-orientation-locker/-/react-native-orientation-locker-1.7.0.tgz#47ef2b9c24618e40f0a521f184b51270e576b028"
   integrity sha512-2PhG4UyRJktb3KCTISStuu8/q+Q3q3oPesGg9DhdY0b6Cu/ZzxkCvkbJte2TPWRYkS0JpClimvqVaonulGvDrA==
 
-react-native-safe-area-context@^4.7.1:
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.14.1.tgz#980c3c9db02a2314fa8ceb07f614728802320367"
-  integrity sha512-+tUhT5WBl8nh5+P+chYhAjR470iCByf9z5EYdCEbPaAK3Yfzw+o8VRPnUgmPAKlSccOgQBxx3NOl/Wzckn9ujg==
+react-native-safe-area-context@^5.5.1:
+  version "5.5.1"
+  resolved "https://registry.npmmirror.com/react-native-safe-area-context/-/react-native-safe-area-context-5.5.1.tgz#9fac8ae5da8b9ff6f77eb3f697e073f04a1f2f3f"
+  integrity sha512-WYxV+mm7SWuapVWxq2071lkQlDUXjSwcu7Cc2bUtNcF80/Bl0WnuWAZ8+tO46M38PclMrQIIgbv83BvDHJNQ5g==
 
-"react-native-screens@>=3.33.0 <3.36.0":
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.35.0.tgz#4acf4c7d331d47d33d0214d415779540b7664e0e"
-  integrity sha512-rmkqb/M/SQIrXwygk6pXcOhgHltYAhidf1WceO7ujAxkr6XtwmgFyd1HIztsrJa568GrAuwPdQ11I7TpVk+XsA==
+react-native-screens@^3.37.0:
+  version "3.37.0"
+  resolved "https://registry.npmmirror.com/react-native-screens/-/react-native-screens-3.37.0.tgz#836ef8f8012d288bc6130857c4fca2ea1ba24bfc"
+  integrity sha512-vEi4qZqWYoGuVGuHTv1K2XA90rgSydksmR5+tb5uhL93whl6Bch6EEXzC+8eEfj4SimiCgXBPY7r/xTXJxvnUg==
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
-react-native-sound@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.npmmirror.com/react-native-sound/-/react-native-sound-0.11.2.tgz#e542dc5b9e16ab4b3ac7e6eaddb1fc8d98da9038"
-  integrity sha512-LmGc8lgOK3qecYMVQpyHvww/C+wgT6sWeMpVbOe4NCRGC2yKd4fo4U0KBUo9PO7AqKESO3I/2GZg1/C0+bwiiA==
+"react-native-sound@git+https://github.com/ZEGOCLOUD/react-native-sound.git#v0.11.5":
+  version "0.11.5"
+  resolved "git+https://github.com/ZEGOCLOUD/react-native-sound.git#0af3beb657e871ed33ef2fbc711d15d2dc70f308"
 
 react-native@0.79.5:
   version "0.79.5"
