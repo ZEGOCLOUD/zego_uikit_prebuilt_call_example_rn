@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		368819592CDA342E00CF33D5 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368819572CDA333900CF33D5 /* PushKit.framework */; };
 		3688195C2CDA343100CF33D5 /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368819552CDA333500CF33D5 /* CallKit.framework */; };
-		43EFF0D96538F148B0EFB804 /* libPods-ZegoCall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838C1387A807BC0B9507081F /* libPods-ZegoCall.a */; };
+		47A0B936106CAEE3F44FCBB5 /* libPods-ZegoCall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E63C78F86E10B25826D27C04 /* libPods-ZegoCall.a */; };
+		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		86B6FD50296FF499002ACF81 /* zego_outgoing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 86B6FD4E296FF499002ACF81 /* zego_outgoing.mp3 */; };
 		86B6FD51296FF499002ACF81 /* zego_incoming.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 86B6FD4F296FF499002ACF81 /* zego_incoming.mp3 */; };
@@ -19,50 +19,33 @@
 		EB55A35E29E9737D003B3305 /* zego_notification_incoming.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB55A35D29E9737D003B3305 /* zego_notification_incoming.caf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ZegoCall;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* ZegoCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZegoCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZegoCall/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZegoCall/Info.plist; sourceTree = "<group>"; };
-		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ZegoCall/AppDelegate.swift; sourceTree = "<group>"; };
 		368819552CDA333500CF33D5 /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
 		368819572CDA333900CF33D5 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ZegoCall/AppDelegate.swift; sourceTree = "<group>"; };
+		76F0BB4F0683F4499A1CD266 /* Pods-ZegoCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZegoCall.debug.xcconfig"; path = "Target Support Files/Pods-ZegoCall/Pods-ZegoCall.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZegoCall/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		838C1387A807BC0B9507081F /* libPods-ZegoCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZegoCall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		861802702972B197004D2488 /* ZegoCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ZegoCall.entitlements; path = ZegoCall/ZegoCall.entitlements; sourceTree = "<group>"; };
 		86B6FD4E296FF499002ACF81 /* zego_outgoing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zego_outgoing.mp3; sourceTree = "<group>"; };
 		86B6FD4F296FF499002ACF81 /* zego_incoming.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zego_incoming.mp3; sourceTree = "<group>"; };
-		8BEE5D51D05CFE8EDB7CDB1A /* Pods-ZegoCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZegoCall.debug.xcconfig"; path = "Target Support Files/Pods-ZegoCall/Pods-ZegoCall.debug.xcconfig"; sourceTree = "<group>"; };
-		E5FE753C1C4C99DC7A55E599 /* Pods-ZegoCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZegoCall.release.xcconfig"; path = "Target Support Files/Pods-ZegoCall/Pods-ZegoCall.release.xcconfig"; sourceTree = "<group>"; };
+		9464D60B60FC4B5DC1DAA107 /* Pods-ZegoCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZegoCall.release.xcconfig"; path = "Target Support Files/Pods-ZegoCall/Pods-ZegoCall.release.xcconfig"; sourceTree = "<group>"; };
+		E63C78F86E10B25826D27C04 /* libPods-ZegoCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZegoCall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB55A35D29E9737D003B3305 /* zego_notification_incoming.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = zego_notification_incoming.caf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAD588DE34752035BA80F272 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ZegoCall/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				368819592CDA342E00CF33D5 /* PushKit.framework in Frameworks */,
 				3688195C2CDA343100CF33D5 /* CallKit.framework in Frameworks */,
-				43EFF0D96538F148B0EFB804 /* libPods-ZegoCall.a in Frameworks */,
+				47A0B936106CAEE3F44FCBB5 /* libPods-ZegoCall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +71,7 @@
 				368819572CDA333900CF33D5 /* PushKit.framework */,
 				368819552CDA333500CF33D5 /* CallKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				838C1387A807BC0B9507081F /* libPods-ZegoCall.a */,
+				E63C78F86E10B25826D27C04 /* libPods-ZegoCall.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,8 +111,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8BEE5D51D05CFE8EDB7CDB1A /* Pods-ZegoCall.debug.xcconfig */,
-				E5FE753C1C4C99DC7A55E599 /* Pods-ZegoCall.release.xcconfig */,
+				76F0BB4F0683F4499A1CD266 /* Pods-ZegoCall.debug.xcconfig */,
+				9464D60B60FC4B5DC1DAA107 /* Pods-ZegoCall.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -141,13 +124,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ZegoCall" */;
 			buildPhases = (
-				4C236B2A0FF182035DB8707C /* [CP] Check Pods Manifest.lock */,
+				5271255A5D5BD2C91FDC0BCB /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				DFE791A1972D0C264F9477F5 /* [CP] Embed Pods Frameworks */,
-				1AAAB3D843999CA67AFE3445 /* [CP] Copy Pods Resources */,
+				AA19D428C5EE94D14ECEACC8 /* [CP] Embed Pods Frameworks */,
+				705E08F416484CA1C6D5812A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,13 +173,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,28 +203,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		1AAAB3D843999CA67AFE3445 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C236B2A0FF182035DB8707C /* [CP] Check Pods Manifest.lock */ = {
+		5271255A5D5BD2C91FDC0BCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,7 +225,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFE791A1972D0C264F9477F5 /* [CP] Embed Pods Frameworks */ = {
+		705E08F416484CA1C6D5812A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA19D428C5EE94D14ECEACC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,13 +250,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZegoCall/Pods-ZegoCall-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -294,13 +262,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,18 +272,10 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ZegoCall */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BEE5D51D05CFE8EDB7CDB1A /* Pods-ZegoCall.debug.xcconfig */;
+			baseConfigurationReference = 76F0BB4F0683F4499A1CD266 /* Pods-ZegoCall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -337,7 +290,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3.0;
+				MARKETING_VERSION = 6.3.19;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -353,7 +306,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5FE753C1C4C99DC7A55E599 /* Pods-ZegoCall.release.xcconfig */;
+			baseConfigurationReference = 9464D60B60FC4B5DC1DAA107 /* Pods-ZegoCall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -367,7 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.3.0;
+				MARKETING_VERSION = 6.3.19;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -454,7 +407,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -528,7 +484,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

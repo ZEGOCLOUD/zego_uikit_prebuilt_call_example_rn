@@ -4,6 +4,7 @@ import React_RCTAppDelegate
 import ReactAppDependencyProvider
 
 @main
+@objc(AppDelegate)
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
