@@ -89,6 +89,9 @@ export const onUserLogin = async (userID, userName, props) => {
             turnOnCameraWhenJoining: (callInvitationData.type === ZegoInvitationType.videoCall) ? true : false,
             layout: {
               mode: (callInvitationData.invitees && callInvitationData.invitees.length > 1) ? ZegoLayoutMode.gallery : ZegoLayoutMode.pictureInPicture,
+              config: {
+                removeViewWhenAudioVideoUnavailable: false
+              }
             },
             // foregroundBuilder: () => <ZegoCountdownLabel maxDuration={10} onCountdownFinished={() => { console.log("Countdown finished!!"); ZegoUIKitPrebuiltCallService.hangUp(true); }} />,
             onCallEnd: (callID, reason, duration) => {
