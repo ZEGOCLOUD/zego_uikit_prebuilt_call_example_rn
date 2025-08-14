@@ -93,7 +93,11 @@ export const onUserLogin = async (userID, userName, props) => {
             // foregroundBuilder: () => <ZegoCountdownLabel maxDuration={10} onCountdownFinished={() => { console.log("Countdown finished!!"); ZegoUIKitPrebuiltCallService.hangUp(true); }} />,
             onCallEnd: (callID, reason, duration) => {
               console.log('########CallWithInvitation onCallEnd', callID, reason, duration);
-              props.navigation.navigate('HomeScreen');
+              if (typeof props.navigation.popTo === 'function') {
+                props.navigation.popTo('HomeScreen');
+              } else {
+                props.navigation.navigate('HomeScreen');
+              }
             },
             timingConfig: {
               isDurationVisible: true,
@@ -112,7 +116,11 @@ export const onUserLogin = async (userID, userName, props) => {
             },
             onWindowMinimized: () => {
               console.log('[Demo]CallInvitation onWindowMinimized');
-              props.navigation.navigate('HomeScreen');
+              if (typeof props.navigation.popTo === 'function') {
+                props.navigation.popTo('HomeScreen');
+              } else {
+                props.navigation.navigate('HomeScreen');
+              }
             },
             onWindowMaximized: () => {
               console.log('[Demo]CallInvitation onWindowMaximized');

@@ -69,7 +69,11 @@ export default function HomeScreen(props) {
           onUserLogin(info.userID, info.userName, props)
         } else {
           // Back to the login screen if not login before
-          props.navigation.navigate('LoginScreen');
+          if (typeof props.navigation.popTo === 'function') {
+            props.navigation.popTo('LoginScreen');
+          } else {
+            props.navigation.navigate('LoginScreen');
+          }
         }
       })
     }, [])
@@ -139,7 +143,11 @@ export default function HomeScreen(props) {
           </View>
           <View style={{ width: 220, marginTop: 100 }}>
             <Button title='Back To Login Screen' onPress={() => { 
-              props.navigation.navigate('LoginScreen')
+              if (typeof props.navigation.popTo === 'function') {
+                props.navigation.popTo('LoginScreen')
+              } else {
+                props.navigation.navigate('LoginScreen')
+              }
               ZegoUIKitPrebuiltCallService.uninit();
             }}></Button>
           </View>
