@@ -38,8 +38,8 @@
     "zego-zim-react-native": "^2.20.0",
     "zego-zpns-react-native": "^2.8.1",
 
-    "@zegocloud/zego-uikit-rn": "^2.17.15",
-    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.3.20",
+    "@zegocloud/zego-uikit-rn": "^2.18.6",
+    "@zegocloud/zego-uikit-prebuilt-call-rn": "^6.5.11",
 
     "@react-navigation/native": "^7.1.17",
     "@react-navigation/native-stack": "^7.3.24",
@@ -52,7 +52,8 @@
     "react-native-encrypted-storage": "^4.0.3",
     "react-native-keep-awake": "4.0.0",
     "react-native-orientation-locker": "^1.7.0",
-    "react-native-sound": "git+https://github.com/ZEGOCLOUD/react-native-sound.git#v0.11.5"
+    "react-native-sound": "git+https://github.com/ZEGOCLOUD/react-native-sound.git#v0.11.5",
+    "react-native-uuid": "^2.0.3"
   },
   "engines": {
     "node": ">=18"
