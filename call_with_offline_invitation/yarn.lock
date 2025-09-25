@@ -2059,10 +2059,10 @@
   resolved "https://registry.npmmirror.com/@vscode/sudo-prompt/-/sudo-prompt-9.3.1.tgz#c562334bc6647733649fd42afc96c0eea8de3b65"
   integrity sha512-9ORTwwS74VaTn38tNbQhsA5U44zkJfcb0BdTSyyG6frP4e8KMtHuTXYmwefe5dpL8XB1aGSIVTaLjD3BbWb5iA==
 
-"@zegocloud/zego-uikit-prebuilt-call-rn@^6.5.11":
-  version "6.5.11"
-  resolved "https://registry.npmmirror.com/@zegocloud/zego-uikit-prebuilt-call-rn/-/zego-uikit-prebuilt-call-rn-6.5.11.tgz#c861ee5506cffff44b9fb0039d9faad9c9b90856"
-  integrity sha512-vWS9nY3UqrBWUiau7i0cf03Yo1uEYGBhBMcEAjpJPN/k8Q5tBOky2Zo36lB5UGUWPLEP43OA83bLTR+jV21OMw==
+"@zegocloud/zego-uikit-prebuilt-call-rn@^6.6.1":
+  version "6.6.1"
+  resolved "https://registry.npmmirror.com/@zegocloud/zego-uikit-prebuilt-call-rn/-/zego-uikit-prebuilt-call-rn-6.6.1.tgz#6af4f906c1d2cf70b912217a2fb68db2a7e106aa"
+  integrity sha512-QCS8Y1erJteKUwUmTXGSOh3g94GLNbFnfhD6j86+uZH4wH1cYbP1Tpny8iqNVX8b5KwTtvf2sAUGb9lxE8PCGg==
 
 "@zegocloud/zego-uikit-rn@^2.18.6":
   version "2.18.6"

@@ -26,12 +26,12 @@ export const onUserLogin = async (userID, userName, props) => {
           incomingCallFileName: 'zego_incoming.mp3',
           outgoingCallFileName: 'zego_outgoing.mp3',
         },
-        // notifyWhenAppRunningInBackgroundOrQuit: true,
+        // isIOSSandboxEnvironment: undefined,   // false for TestFlight, true for debug, undefined for auto
+        certificateIndex: ZegoMultiCertificate.first,
         androidNotificationConfig: {
           channelID: "ZegoUIKit",
           channelName: "ZegoUIKit",
         },
-        certificateIndex: ZegoMultiCertificate.first,
         avatarBuilder: ({userInfo}) => {
           return <View style={{width: '100%', height: '100%'}}>
            <Image 

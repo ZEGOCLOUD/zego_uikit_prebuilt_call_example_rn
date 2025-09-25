@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZegoCall/ZegoCall.entitlements;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 92515;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ZegoCall/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZegoCall;
@@ -289,7 +289,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.11;
+				MARKETING_VERSION = 6.6.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -310,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZegoCall/ZegoCall.entitlements;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 92515;
 				INFOPLIST_FILE = ZegoCall/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ZegoCall;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -318,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.5.11;
+				MARKETING_VERSION = 6.6.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
