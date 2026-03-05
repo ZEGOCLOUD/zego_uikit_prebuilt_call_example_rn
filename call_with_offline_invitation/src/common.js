@@ -140,5 +140,11 @@ export const onUserLogin = async (userID, userName, props) => {
           deny: 'Deny',
         });
       }
+      
+      ZegoUIKitPrebuiltCallService.requestFullIntentPermission({
+        message: 'To display incoming call notifications on the lock screen, we need the "Display full-screen notifications" permission. Please allow it so you never miss a call.',
+        allow: 'Allow',
+        deny: 'Deny',
+      });
     });
 }
